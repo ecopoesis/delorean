@@ -18,7 +18,7 @@ BOARD_TAG  = arduino_due_x
 // Port (optionnal)
 // most common are /dev/tty.usbserial*, /dev/tty.usbmodem* or /dev/tty.uart*
 //
-BOARD_PORT = /dev/tty.usb*
+BOARD_PORT = /dev/cu.usb*
 
 // References for Xcode code-sense
 // see Boards.txt for <tag>.build.mcu=<GCC_PREPROCESSOR_DEFINITIONS>

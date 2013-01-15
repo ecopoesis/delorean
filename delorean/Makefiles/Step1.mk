@@ -156,7 +156,7 @@ ifneq ($(MAKECMDGOALS),boards)
         else ifneq ($(call PARSE_FILE,$(BOARD_TAG),name,$(ARDUINO_PATH)/hardware/arduino/avr/boards.txt),)
             include $(MAKEFILE_PATH)/Arduino15avr.mk
         else ifneq ($(call PARSE_FILE,$(BOARD_TAG),name,$(ARDUINO_PATH)/hardware/arduino/sam/boards.txt),)
-            include $(MAKEFILE_PATH)/Arduino15avr.mk
+            include $(MAKEFILE_PATH)/Arduino15sam.mk
         else ifneq ($(call PARSE_FILE,$(BOARD_TAG),name,$(ARDUINO_PATH)/hardware/arduino/boards.txt),)
             include $(MAKEFILE_PATH)/Arduino.mk
         else ifneq ($(shell grep ^$(BOARD_TAG).name $(MPIDE_PATH)/hardware/pic32/boards.txt),)

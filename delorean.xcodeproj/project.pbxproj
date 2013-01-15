@@ -1409,7 +1409,7 @@
 		36F36CE4169BB78A002811ED /* pdf.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = pdf.sh; path = Utilities/pdf.sh; sourceTree = "<group>"; };
 		36F36CE5169BB78A002811ED /* dist.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = dist.sh; path = Utilities/dist.sh; sourceTree = "<group>"; };
 		36F36CE6169BB78B002811ED /* doxyfile */ = {isa = PBXFileReference; lastKnownFileType = text; name = doxyfile; path = Utilities/doxyfile; sourceTree = "<group>"; };
-		36F36CE7169BB78B002811ED /* delorean.ino */ = {isa = PBXFileReference; lastKnownFileType = text; path = delorean.ino; sourceTree = "<group>"; };
+		36F36CE7169BB78B002811ED /* delorean.ino */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; path = delorean.ino; sourceTree = "<group>"; };
 		36F36D0F169BB821002811ED /* Wakeup.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Wakeup.cpp; sourceTree = "<group>"; };
 		36F36D10169BB821002811ED /* Wakeup.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Wakeup.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -2856,7 +2856,7 @@
 				36F36B06169BB789002811ED /* teensy3 */,
 				36F36B0B169BB789002811ED /* teensy */,
 				36F36B0D169BB789002811ED /* arduino */,
-				36F36B1B169BB789002811ED /*  */,
+				36F36B1B169BB789002811ED,
 				36F36B33169BB789002811ED /* usb_disk */,
 			);
 			name = cores;
@@ -2917,7 +2917,7 @@
 			name = arduino;
 			sourceTree = "<group>";
 		};
-		36F36B1B169BB789002811ED /*  */ = {
+		36F36B1B169BB789002811ED = {
 			isa = PBXGroup;
 			children = (
 				36F36B1C169BB789002811ED /* core_id.h */,
@@ -2964,7 +2964,6 @@
 				36F36B81169BB789002811ED /* HardwareSerial2.cpp */,
 				36F36B83169BB789002811ED /* HardwareSerial3.cpp */,
 			);
-			name = "";
 			sourceTree = "<group>";
 		};
 		36F36B27169BB789002811ED /* avr */ = {
@@ -4295,7 +4294,7 @@
 /* Begin XCBuildConfiguration section */
 		36F36CE8169BB78B002811ED /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 36F36CB8169BB78A002811ED /* Arduino Uno.xcconfig */;
+			baseConfigurationReference = 36F36CC2169BB78A002811ED /* Arduino Due.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -4323,6 +4322,7 @@
 		};
 		36F36CE9169BB78B002811ED /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 36F36CC2169BB78A002811ED /* Arduino Due.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -4494,6 +4494,7 @@
 				36F36CEC169BB78B002811ED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		36F36CED169BB78B002811ED /* Build configuration list for PBXLegacyTarget "Build" */ = {
 			isa = XCConfigurationList;
@@ -4502,6 +4503,7 @@
 				36F36CEF169BB78B002811ED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		36F36CF0169BB78B002811ED /* Build configuration list for PBXLegacyTarget "Document" */ = {
 			isa = XCConfigurationList;
@@ -4510,6 +4512,7 @@
 				36F36CF2169BB78B002811ED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		36F36CF3169BB78B002811ED /* Build configuration list for PBXLegacyTarget "Distribute" */ = {
 			isa = XCConfigurationList;
@@ -4518,6 +4521,7 @@
 				36F36CF5169BB78B002811ED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		36F36CF6169BB78B002811ED /* Build configuration list for PBXLegacyTarget "Boards" */ = {
 			isa = XCConfigurationList;
@@ -4526,6 +4530,7 @@
 				36F36CF8169BB78B002811ED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		36F36CF9169BB78B002811ED /* Build configuration list for PBXLegacyTarget "Serial" */ = {
 			isa = XCConfigurationList;
@@ -4534,6 +4539,7 @@
 				36F36CFB169BB78B002811ED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		36F36CFC169BB78B002811ED /* Build configuration list for PBXLegacyTarget "Upload" */ = {
 			isa = XCConfigurationList;
@@ -4542,6 +4548,7 @@
 				36F36CFE169BB78B002811ED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		36F36CFF169BB78B002811ED /* Build configuration list for PBXLegacyTarget "Clean" */ = {
 			isa = XCConfigurationList;
@@ -4550,6 +4557,7 @@
 				36F36D01169BB78B002811ED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		36F36D02169BB78B002811ED /* Build configuration list for PBXLegacyTarget "Fast" */ = {
 			isa = XCConfigurationList;
@@ -4558,6 +4566,7 @@
 				36F36D04169BB78B002811ED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		36F36D05169BB78B002811ED /* Build configuration list for PBXLegacyTarget "Make" */ = {
 			isa = XCConfigurationList;
@@ -4566,6 +4575,7 @@
 				36F36D07169BB78B002811ED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		36F36D08169BB78B002811ED /* Build configuration list for PBXNativeTarget "Index" */ = {
 			isa = XCConfigurationList;
@@ -4574,6 +4584,7 @@
 				36F36D0A169BB78B002811ED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

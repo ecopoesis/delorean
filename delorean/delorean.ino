@@ -70,10 +70,10 @@ void setup() {
 void loop() {
     for (int i = 0; i < 255; i++) {
         wakeup.set(i, 0, 255 - i);
-        delay(50);
+        delay(500);
     }
     for (int i = 0; i < 255; i++) {
         wakeup.set(255 - i, 0, i);
-        delay(50);
+        delay(500);
     }
 }

@@ -32,7 +32,8 @@ BOARDS_TXT       := $(APPLICATION_PATH)/hardware/arduino/sam/boards.txt
 UPLOADER          = bossac
 BOSSAC_PATH       = $(APPLICATION_PATH)/hardware/tools
 BOSSAC            = $(BOSSAC_PATH)/bossac
-BOSSAC_OPTS       = --port=$(AVRDUDE_PORT) -U $(call PARSE_BOARD,$(BOARD_TAG),upload.native_usb)
+BOSSAC_PORT       = $(subst /dev/,,$(AVRDUDE_PORT))
+BOSSAC_OPTS       = --port=$(BOSSAC_PORT) -U false
 BOSSAC_OPTS      += -e -w -v -b
 
 

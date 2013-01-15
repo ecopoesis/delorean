@@ -754,7 +754,8 @@ ifeq ($(CHANGE_FLAG),1)
 		@echo "nil" > $(OBJDIR)/nil
 		$(REMOVE) $(OBJDIR)/* # */
 else
-		$(REMOVE) $(LOCAL_OBJS)
+#		$(REMOVE) $(LOCAL_OBJS)
+		for f in $(LOCAL_OBJS); do if [ -f $$f ]; then rm $$f; fi; done
 endif
 
 #@echo "---- changed ---- "
