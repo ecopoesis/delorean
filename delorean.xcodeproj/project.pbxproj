@@ -10,12 +10,6 @@
 		36F366D5169BB785002811ED /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 36F366D4169BB785002811ED /* main.cpp */; };
 		36F366D7169BB785002811ED /* LocalLibrary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 36F366D6169BB785002811ED /* LocalLibrary.cpp */; };
 		36F366DA169BB785002811ED /* Makefile in Sources */ = {isa = PBXBuildFile; fileRef = 36F366D9169BB785002811ED /* Makefile */; };
-		36F36714169BB785002811ED /* WInterrupts.c in Sources */ = {isa = PBXBuildFile; fileRef = 36F36713169BB785002811ED /* WInterrupts.c */; };
-		36F36716169BB785002811ED /* wiring.c in Sources */ = {isa = PBXBuildFile; fileRef = 36F36715169BB785002811ED /* wiring.c */; };
-		36F36718169BB785002811ED /* wiring_analog.c in Sources */ = {isa = PBXBuildFile; fileRef = 36F36717169BB785002811ED /* wiring_analog.c */; };
-		36F3671A169BB785002811ED /* wiring_digital.c in Sources */ = {isa = PBXBuildFile; fileRef = 36F36719169BB785002811ED /* wiring_digital.c */; };
-		36F3671C169BB785002811ED /* wiring_pulse.c in Sources */ = {isa = PBXBuildFile; fileRef = 36F3671B169BB785002811ED /* wiring_pulse.c */; };
-		36F3671E169BB785002811ED /* wiring_shift.c in Sources */ = {isa = PBXBuildFile; fileRef = 36F3671D169BB785002811ED /* wiring_shift.c */; };
 		36F36720169BB785002811ED /* cortex_handlers.c in Sources */ = {isa = PBXBuildFile; fileRef = 36F3671F169BB785002811ED /* cortex_handlers.c */; };
 		36F36722169BB785002811ED /* iar_calls_sam3.c in Sources */ = {isa = PBXBuildFile; fileRef = 36F36721169BB785002811ED /* iar_calls_sam3.c */; };
 		36F36724169BB785002811ED /* itoa.c in Sources */ = {isa = PBXBuildFile; fileRef = 36F36723169BB785002811ED /* itoa.c */; };
@@ -25,18 +19,6 @@
 		36F3672C169BB785002811ED /* wiring_analog.c in Sources */ = {isa = PBXBuildFile; fileRef = 36F3672B169BB785002811ED /* wiring_analog.c */; };
 		36F3672E169BB785002811ED /* wiring_digital.c in Sources */ = {isa = PBXBuildFile; fileRef = 36F3672D169BB785002811ED /* wiring_digital.c */; };
 		36F36730169BB785002811ED /* wiring_shift.c in Sources */ = {isa = PBXBuildFile; fileRef = 36F3672F169BB785002811ED /* wiring_shift.c */; };
-		36F36732169BB785002811ED /* CDC.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 36F36731169BB785002811ED /* CDC.cpp */; };
-		36F36734169BB785002811ED /* HardwareSerial.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 36F36733169BB785002811ED /* HardwareSerial.cpp */; };
-		36F36736169BB785002811ED /* HID.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 36F36735169BB785002811ED /* HID.cpp */; };
-		36F36738169BB785002811ED /* IPAddress.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 36F36737169BB785002811ED /* IPAddress.cpp */; };
-		36F3673A169BB785002811ED /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 36F36739169BB785002811ED /* main.cpp */; };
-		36F3673C169BB785002811ED /* new.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 36F3673B169BB785002811ED /* new.cpp */; };
-		36F3673E169BB785002811ED /* Print.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 36F3673D169BB785002811ED /* Print.cpp */; };
-		36F36740169BB786002811ED /* Stream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 36F3673F169BB785002811ED /* Stream.cpp */; };
-		36F36742169BB786002811ED /* Tone.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 36F36741169BB786002811ED /* Tone.cpp */; };
-		36F36744169BB786002811ED /* USBCore.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 36F36743169BB786002811ED /* USBCore.cpp */; };
-		36F36746169BB786002811ED /* WMath.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 36F36745169BB786002811ED /* WMath.cpp */; };
-		36F36748169BB786002811ED /* WString.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 36F36747169BB786002811ED /* WString.cpp */; };
 		36F3674A169BB786002811ED /* cxxabi-compat.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 36F36749169BB786002811ED /* cxxabi-compat.cpp */; };
 		36F3674C169BB786002811ED /* IPAddress.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 36F3674B169BB786002811ED /* IPAddress.cpp */; };
 		36F3674E169BB786002811ED /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 36F3674D169BB786002811ED /* main.cpp */; };
@@ -101,24 +83,6 @@
 		36F3681C169BB787002811ED /* Sd2Card.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 36F3681B169BB787002811ED /* Sd2Card.cpp */; };
 		36F3681E169BB787002811ED /* SdFile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 36F3681D169BB787002811ED /* SdFile.cpp */; };
 		36F36820169BB787002811ED /* SdVolume.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 36F3681F169BB787002811ED /* SdVolume.cpp */; };
-		36F36824169BB787002811ED /* CDC.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 36F36823169BB787002811ED /* CDC.cpp */; };
-		36F36827169BB787002811ED /* HardwareSerial.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 36F36826169BB787002811ED /* HardwareSerial.cpp */; };
-		36F3682A169BB787002811ED /* HID.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 36F36829169BB787002811ED /* HID.cpp */; };
-		36F3682C169BB787002811ED /* IPAddress.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 36F3682B169BB787002811ED /* IPAddress.cpp */; };
-		36F3682F169BB787002811ED /* new.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 36F3682E169BB787002811ED /* new.cpp */; };
-		36F36832169BB787002811ED /* pins_arduino.c in Sources */ = {isa = PBXBuildFile; fileRef = 36F36831169BB787002811ED /* pins_arduino.c */; };
-		36F36836169BB787002811ED /* Print.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 36F36835169BB787002811ED /* Print.cpp */; };
-		36F3683B169BB787002811ED /* Stream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 36F3683A169BB787002811ED /* Stream.cpp */; };
-		36F3683E169BB787002811ED /* Tone.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 36F3683D169BB787002811ED /* Tone.cpp */; };
-		36F36842169BB787002811ED /* USBCore.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 36F36841169BB787002811ED /* USBCore.cpp */; };
-		36F36848169BB787002811ED /* WInterrupts.c in Sources */ = {isa = PBXBuildFile; fileRef = 36F36847169BB787002811ED /* WInterrupts.c */; };
-		36F3684A169BB787002811ED /* wiring_analog.c in Sources */ = {isa = PBXBuildFile; fileRef = 36F36849169BB787002811ED /* wiring_analog.c */; };
-		36F3684C169BB787002811ED /* wiring_digital.c in Sources */ = {isa = PBXBuildFile; fileRef = 36F3684B169BB787002811ED /* wiring_digital.c */; };
-		36F3684F169BB787002811ED /* wiring_pulse.c in Sources */ = {isa = PBXBuildFile; fileRef = 36F3684E169BB787002811ED /* wiring_pulse.c */; };
-		36F36851169BB787002811ED /* wiring_shift.c in Sources */ = {isa = PBXBuildFile; fileRef = 36F36850169BB787002811ED /* wiring_shift.c */; };
-		36F36853169BB787002811ED /* wiring.c in Sources */ = {isa = PBXBuildFile; fileRef = 36F36852169BB787002811ED /* wiring.c */; };
-		36F36856169BB787002811ED /* WMath.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 36F36855169BB787002811ED /* WMath.cpp */; };
-		36F36859169BB787002811ED /* WString.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 36F36858169BB787002811ED /* WString.cpp */; };
 		36F3685D169BB787002811ED /* EEPROM.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 36F3685C169BB787002811ED /* EEPROM.cpp */; };
 		36F36861169BB787002811ED /* Client.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 36F36860169BB787002811ED /* Client.cpp */; };
 		36F36864169BB787002811ED /* Ethernet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 36F36863169BB787002811ED /* Ethernet.cpp */; };
@@ -427,30 +391,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		369C244C16A642C20033B2E9 /* glcdfont.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = glcdfont.c; sourceTree = "<group>"; };
+		369C244D16A642C20033B2E9 /* ST7565.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ST7565.cpp; sourceTree = "<group>"; };
+		369C244E16A642C20033B2E9 /* ST7565.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ST7565.h; sourceTree = "<group>"; };
+		369C245016A647710033B2E9 /* pgmspace.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = pgmspace.h; sourceTree = "<group>"; };
 		36F366D0169BB785002811ED /* Index */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Index; sourceTree = BUILT_PRODUCTS_DIR; };
 		36F366D4169BB785002811ED /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		36F366D6169BB785002811ED /* LocalLibrary.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LocalLibrary.cpp; sourceTree = "<group>"; };
 		36F366D8169BB785002811ED /* LocalLibrary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocalLibrary.h; sourceTree = "<group>"; };
 		36F366D9169BB785002811ED /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
 		36F366DC169BB785002811ED /* Sketchbook.txt */ = {isa = PBXFileReference; lastKnownFileType = text; name = Sketchbook.txt; path = Sketchbook/Sketchbook.txt; sourceTree = "<group>"; };
-		36F366E1169BB785002811ED /* Arduino.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Arduino.h; path = Arduino/cores/avr/Arduino.h; sourceTree = "<group>"; };
-		36F366E2169BB785002811ED /* binary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = binary.h; path = Arduino/cores/avr/binary.h; sourceTree = "<group>"; };
-		36F366E3169BB785002811ED /* Client.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Client.h; path = Arduino/cores/avr/Client.h; sourceTree = "<group>"; };
-		36F366E4169BB785002811ED /* HardwareSerial.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = HardwareSerial.h; path = Arduino/cores/avr/HardwareSerial.h; sourceTree = "<group>"; };
-		36F366E5169BB785002811ED /* IPAddress.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = IPAddress.h; path = Arduino/cores/avr/IPAddress.h; sourceTree = "<group>"; };
-		36F366E6169BB785002811ED /* new.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = new.h; path = Arduino/cores/avr/new.h; sourceTree = "<group>"; };
-		36F366E7169BB785002811ED /* Platform.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Platform.h; path = Arduino/cores/avr/Platform.h; sourceTree = "<group>"; };
-		36F366E8169BB785002811ED /* Print.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Print.h; path = Arduino/cores/avr/Print.h; sourceTree = "<group>"; };
-		36F366E9169BB785002811ED /* Printable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Printable.h; path = Arduino/cores/avr/Printable.h; sourceTree = "<group>"; };
-		36F366EA169BB785002811ED /* Server.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Server.h; path = Arduino/cores/avr/Server.h; sourceTree = "<group>"; };
-		36F366EB169BB785002811ED /* Stream.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Stream.h; path = Arduino/cores/avr/Stream.h; sourceTree = "<group>"; };
-		36F366EC169BB785002811ED /* Udp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Udp.h; path = Arduino/cores/avr/Udp.h; sourceTree = "<group>"; };
-		36F366ED169BB785002811ED /* USBAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = USBAPI.h; path = Arduino/cores/avr/USBAPI.h; sourceTree = "<group>"; };
-		36F366EE169BB785002811ED /* USBCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = USBCore.h; path = Arduino/cores/avr/USBCore.h; sourceTree = "<group>"; };
-		36F366EF169BB785002811ED /* USBDesc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = USBDesc.h; path = Arduino/cores/avr/USBDesc.h; sourceTree = "<group>"; };
-		36F366F0169BB785002811ED /* WCharacter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WCharacter.h; path = Arduino/cores/avr/WCharacter.h; sourceTree = "<group>"; };
-		36F366F1169BB785002811ED /* wiring_private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = wiring_private.h; path = Arduino/cores/avr/wiring_private.h; sourceTree = "<group>"; };
-		36F366F2169BB785002811ED /* WString.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WString.h; path = Arduino/cores/avr/WString.h; sourceTree = "<group>"; };
 		36F366F4169BB785002811ED /* Arduino.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Arduino.h; path = Arduino/cores/sam/Arduino.h; sourceTree = "<group>"; };
 		36F366F5169BB785002811ED /* binary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = binary.h; path = Arduino/cores/sam/binary.h; sourceTree = "<group>"; };
 		36F366F6169BB785002811ED /* Client.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Client.h; path = Arduino/cores/sam/Client.h; sourceTree = "<group>"; };
@@ -482,12 +432,6 @@
 		36F36710169BB785002811ED /* wiring_shift.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = wiring_shift.h; path = Arduino/cores/sam/wiring_shift.h; sourceTree = "<group>"; };
 		36F36711169BB785002811ED /* WMath.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WMath.h; path = Arduino/cores/sam/WMath.h; sourceTree = "<group>"; };
 		36F36712169BB785002811ED /* WString.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WString.h; path = Arduino/cores/sam/WString.h; sourceTree = "<group>"; };
-		36F36713169BB785002811ED /* WInterrupts.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = WInterrupts.c; path = Arduino/cores/avr/WInterrupts.c; sourceTree = "<group>"; };
-		36F36715169BB785002811ED /* wiring.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = wiring.c; path = Arduino/cores/avr/wiring.c; sourceTree = "<group>"; };
-		36F36717169BB785002811ED /* wiring_analog.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = wiring_analog.c; path = Arduino/cores/avr/wiring_analog.c; sourceTree = "<group>"; };
-		36F36719169BB785002811ED /* wiring_digital.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = wiring_digital.c; path = Arduino/cores/avr/wiring_digital.c; sourceTree = "<group>"; };
-		36F3671B169BB785002811ED /* wiring_pulse.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = wiring_pulse.c; path = Arduino/cores/avr/wiring_pulse.c; sourceTree = "<group>"; };
-		36F3671D169BB785002811ED /* wiring_shift.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = wiring_shift.c; path = Arduino/cores/avr/wiring_shift.c; sourceTree = "<group>"; };
 		36F3671F169BB785002811ED /* cortex_handlers.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = cortex_handlers.c; path = Arduino/cores/sam/cortex_handlers.c; sourceTree = "<group>"; };
 		36F36721169BB785002811ED /* iar_calls_sam3.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = iar_calls_sam3.c; path = Arduino/cores/sam/iar_calls_sam3.c; sourceTree = "<group>"; };
 		36F36723169BB785002811ED /* itoa.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = itoa.c; path = Arduino/cores/sam/itoa.c; sourceTree = "<group>"; };
@@ -497,18 +441,6 @@
 		36F3672B169BB785002811ED /* wiring_analog.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = wiring_analog.c; path = Arduino/cores/sam/wiring_analog.c; sourceTree = "<group>"; };
 		36F3672D169BB785002811ED /* wiring_digital.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = wiring_digital.c; path = Arduino/cores/sam/wiring_digital.c; sourceTree = "<group>"; };
 		36F3672F169BB785002811ED /* wiring_shift.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = wiring_shift.c; path = Arduino/cores/sam/wiring_shift.c; sourceTree = "<group>"; };
-		36F36731169BB785002811ED /* CDC.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = CDC.cpp; path = Arduino/cores/avr/CDC.cpp; sourceTree = "<group>"; };
-		36F36733169BB785002811ED /* HardwareSerial.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = HardwareSerial.cpp; path = Arduino/cores/avr/HardwareSerial.cpp; sourceTree = "<group>"; };
-		36F36735169BB785002811ED /* HID.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = HID.cpp; path = Arduino/cores/avr/HID.cpp; sourceTree = "<group>"; };
-		36F36737169BB785002811ED /* IPAddress.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = IPAddress.cpp; path = Arduino/cores/avr/IPAddress.cpp; sourceTree = "<group>"; };
-		36F36739169BB785002811ED /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = Arduino/cores/avr/main.cpp; sourceTree = "<group>"; };
-		36F3673B169BB785002811ED /* new.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = new.cpp; path = Arduino/cores/avr/new.cpp; sourceTree = "<group>"; };
-		36F3673D169BB785002811ED /* Print.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Print.cpp; path = Arduino/cores/avr/Print.cpp; sourceTree = "<group>"; };
-		36F3673F169BB785002811ED /* Stream.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Stream.cpp; path = Arduino/cores/avr/Stream.cpp; sourceTree = "<group>"; };
-		36F36741169BB786002811ED /* Tone.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Tone.cpp; path = Arduino/cores/avr/Tone.cpp; sourceTree = "<group>"; };
-		36F36743169BB786002811ED /* USBCore.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = USBCore.cpp; path = Arduino/cores/avr/USBCore.cpp; sourceTree = "<group>"; };
-		36F36745169BB786002811ED /* WMath.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = WMath.cpp; path = Arduino/cores/avr/WMath.cpp; sourceTree = "<group>"; };
-		36F36747169BB786002811ED /* WString.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = WString.cpp; path = Arduino/cores/avr/WString.cpp; sourceTree = "<group>"; };
 		36F36749169BB786002811ED /* cxxabi-compat.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "cxxabi-compat.cpp"; path = "Arduino/cores/sam/cxxabi-compat.cpp"; sourceTree = "<group>"; };
 		36F3674B169BB786002811ED /* IPAddress.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = IPAddress.cpp; path = Arduino/cores/sam/IPAddress.cpp; sourceTree = "<group>"; };
 		36F3674D169BB786002811ED /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = Arduino/cores/sam/main.cpp; sourceTree = "<group>"; };
@@ -636,46 +568,6 @@
 		36F3681B169BB787002811ED /* Sd2Card.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Sd2Card.cpp; path = Arduino/libraries/SD/utility/Sd2Card.cpp; sourceTree = "<group>"; };
 		36F3681D169BB787002811ED /* SdFile.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = SdFile.cpp; path = Arduino/libraries/SD/utility/SdFile.cpp; sourceTree = "<group>"; };
 		36F3681F169BB787002811ED /* SdVolume.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = SdVolume.cpp; path = Arduino/libraries/SD/utility/SdVolume.cpp; sourceTree = "<group>"; };
-		36F36821169BB787002811ED /* Arduino.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Arduino.h; path = Arduino/cores/arduino/Arduino.h; sourceTree = "<group>"; };
-		36F36822169BB787002811ED /* binary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = binary.h; path = Arduino/cores/arduino/binary.h; sourceTree = "<group>"; };
-		36F36823169BB787002811ED /* CDC.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = CDC.cpp; path = Arduino/cores/arduino/CDC.cpp; sourceTree = "<group>"; };
-		36F36825169BB787002811ED /* Client.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Client.h; path = Arduino/cores/arduino/Client.h; sourceTree = "<group>"; };
-		36F36826169BB787002811ED /* HardwareSerial.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = HardwareSerial.cpp; path = Arduino/cores/arduino/HardwareSerial.cpp; sourceTree = "<group>"; };
-		36F36828169BB787002811ED /* HardwareSerial.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = HardwareSerial.h; path = Arduino/cores/arduino/HardwareSerial.h; sourceTree = "<group>"; };
-		36F36829169BB787002811ED /* HID.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = HID.cpp; path = Arduino/cores/arduino/HID.cpp; sourceTree = "<group>"; };
-		36F3682B169BB787002811ED /* IPAddress.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = IPAddress.cpp; path = Arduino/cores/arduino/IPAddress.cpp; sourceTree = "<group>"; };
-		36F3682D169BB787002811ED /* IPAddress.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = IPAddress.h; path = Arduino/cores/arduino/IPAddress.h; sourceTree = "<group>"; };
-		36F3682E169BB787002811ED /* new.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = new.cpp; path = Arduino/cores/arduino/new.cpp; sourceTree = "<group>"; };
-		36F36830169BB787002811ED /* new.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = new.h; path = Arduino/cores/arduino/new.h; sourceTree = "<group>"; };
-		36F36831169BB787002811ED /* pins_arduino.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = pins_arduino.c; path = Arduino/cores/arduino/pins_arduino.c; sourceTree = "<group>"; };
-		36F36833169BB787002811ED /* pins_arduino.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = pins_arduino.h; path = Arduino/cores/arduino/pins_arduino.h; sourceTree = "<group>"; };
-		36F36834169BB787002811ED /* Platform.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Platform.h; path = Arduino/cores/arduino/Platform.h; sourceTree = "<group>"; };
-		36F36835169BB787002811ED /* Print.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Print.cpp; path = Arduino/cores/arduino/Print.cpp; sourceTree = "<group>"; };
-		36F36837169BB787002811ED /* Print.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Print.h; path = Arduino/cores/arduino/Print.h; sourceTree = "<group>"; };
-		36F36838169BB787002811ED /* Printable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Printable.h; path = Arduino/cores/arduino/Printable.h; sourceTree = "<group>"; };
-		36F36839169BB787002811ED /* Server.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Server.h; path = Arduino/cores/arduino/Server.h; sourceTree = "<group>"; };
-		36F3683A169BB787002811ED /* Stream.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Stream.cpp; path = Arduino/cores/arduino/Stream.cpp; sourceTree = "<group>"; };
-		36F3683C169BB787002811ED /* Stream.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Stream.h; path = Arduino/cores/arduino/Stream.h; sourceTree = "<group>"; };
-		36F3683D169BB787002811ED /* Tone.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Tone.cpp; path = Arduino/cores/arduino/Tone.cpp; sourceTree = "<group>"; };
-		36F3683F169BB787002811ED /* Udp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Udp.h; path = Arduino/cores/arduino/Udp.h; sourceTree = "<group>"; };
-		36F36840169BB787002811ED /* USBAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = USBAPI.h; path = Arduino/cores/arduino/USBAPI.h; sourceTree = "<group>"; };
-		36F36841169BB787002811ED /* USBCore.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = USBCore.cpp; path = Arduino/cores/arduino/USBCore.cpp; sourceTree = "<group>"; };
-		36F36843169BB787002811ED /* USBCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = USBCore.h; path = Arduino/cores/arduino/USBCore.h; sourceTree = "<group>"; };
-		36F36844169BB787002811ED /* USBDesc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = USBDesc.h; path = Arduino/cores/arduino/USBDesc.h; sourceTree = "<group>"; };
-		36F36845169BB787002811ED /* WCharacter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WCharacter.h; path = Arduino/cores/arduino/WCharacter.h; sourceTree = "<group>"; };
-		36F36846169BB787002811ED /* WConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WConstants.h; path = Arduino/cores/arduino/WConstants.h; sourceTree = "<group>"; };
-		36F36847169BB787002811ED /* WInterrupts.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = WInterrupts.c; path = Arduino/cores/arduino/WInterrupts.c; sourceTree = "<group>"; };
-		36F36849169BB787002811ED /* wiring_analog.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = wiring_analog.c; path = Arduino/cores/arduino/wiring_analog.c; sourceTree = "<group>"; };
-		36F3684B169BB787002811ED /* wiring_digital.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = wiring_digital.c; path = Arduino/cores/arduino/wiring_digital.c; sourceTree = "<group>"; };
-		36F3684D169BB787002811ED /* wiring_private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = wiring_private.h; path = Arduino/cores/arduino/wiring_private.h; sourceTree = "<group>"; };
-		36F3684E169BB787002811ED /* wiring_pulse.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = wiring_pulse.c; path = Arduino/cores/arduino/wiring_pulse.c; sourceTree = "<group>"; };
-		36F36850169BB787002811ED /* wiring_shift.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = wiring_shift.c; path = Arduino/cores/arduino/wiring_shift.c; sourceTree = "<group>"; };
-		36F36852169BB787002811ED /* wiring.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = wiring.c; path = Arduino/cores/arduino/wiring.c; sourceTree = "<group>"; };
-		36F36854169BB787002811ED /* wiring.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = wiring.h; path = Arduino/cores/arduino/wiring.h; sourceTree = "<group>"; };
-		36F36855169BB787002811ED /* WMath.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = WMath.cpp; path = Arduino/cores/arduino/WMath.cpp; sourceTree = "<group>"; };
-		36F36857169BB787002811ED /* WProgram.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WProgram.h; path = Arduino/cores/arduino/WProgram.h; sourceTree = "<group>"; };
-		36F36858169BB787002811ED /* WString.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = WString.cpp; path = Arduino/cores/arduino/WString.cpp; sourceTree = "<group>"; };
-		36F3685A169BB787002811ED /* WString.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WString.h; path = Arduino/cores/arduino/WString.h; sourceTree = "<group>"; };
 		36F3685C169BB787002811ED /* EEPROM.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = EEPROM.cpp; path = Arduino/libraries/EEPROM/EEPROM.cpp; sourceTree = "<group>"; };
 		36F3685E169BB787002811ED /* EEPROM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = EEPROM.h; path = Arduino/libraries/EEPROM/EEPROM.h; sourceTree = "<group>"; };
 		36F36860169BB787002811ED /* Client.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Client.cpp; path = Arduino/libraries/Ethernet/Client.cpp; sourceTree = "<group>"; };
@@ -1434,6 +1326,9 @@
 		36F366D3169BB785002811ED /* delorean */ = {
 			isa = PBXGroup;
 			children = (
+				369C244C16A642C20033B2E9 /* glcdfont.c */,
+				369C244D16A642C20033B2E9 /* ST7565.cpp */,
+				369C244E16A642C20033B2E9 /* ST7565.h */,
 				36F36D0F169BB821002811ED /* Wakeup.cpp */,
 				36F36D10169BB821002811ED /* Wakeup.h */,
 				36F366D4169BB785002811ED /* main.cpp */,
@@ -1441,6 +1336,7 @@
 				36F366D8169BB785002811ED /* LocalLibrary.h */,
 				36F366D9169BB785002811ED /* Makefile */,
 				36F36CD8169BB78A002811ED /* ReadMe.txt */,
+				369C245016A647710033B2E9 /* pgmspace.h */,
 				36F36CE7169BB78B002811ED /* delorean.ino */,
 				36F366DB169BB785002811ED /* Sketchbook */,
 				36F366DD169BB785002811ED /* Arduino */,
@@ -1485,93 +1381,9 @@
 		36F366DF169BB785002811ED /* arduino */ = {
 			isa = PBXGroup;
 			children = (
-				36F36821169BB787002811ED /* Arduino.h */,
-				36F36822169BB787002811ED /* binary.h */,
-				36F36823169BB787002811ED /* CDC.cpp */,
-				36F36825169BB787002811ED /* Client.h */,
-				36F36826169BB787002811ED /* HardwareSerial.cpp */,
-				36F36828169BB787002811ED /* HardwareSerial.h */,
-				36F36829169BB787002811ED /* HID.cpp */,
-				36F3682B169BB787002811ED /* IPAddress.cpp */,
-				36F3682D169BB787002811ED /* IPAddress.h */,
-				36F3682E169BB787002811ED /* new.cpp */,
-				36F36830169BB787002811ED /* new.h */,
-				36F36831169BB787002811ED /* pins_arduino.c */,
-				36F36833169BB787002811ED /* pins_arduino.h */,
-				36F36834169BB787002811ED /* Platform.h */,
-				36F36835169BB787002811ED /* Print.cpp */,
-				36F36837169BB787002811ED /* Print.h */,
-				36F36838169BB787002811ED /* Printable.h */,
-				36F36839169BB787002811ED /* Server.h */,
-				36F3683A169BB787002811ED /* Stream.cpp */,
-				36F3683C169BB787002811ED /* Stream.h */,
-				36F3683D169BB787002811ED /* Tone.cpp */,
-				36F3683F169BB787002811ED /* Udp.h */,
-				36F36840169BB787002811ED /* USBAPI.h */,
-				36F36841169BB787002811ED /* USBCore.cpp */,
-				36F36843169BB787002811ED /* USBCore.h */,
-				36F36844169BB787002811ED /* USBDesc.h */,
-				36F36845169BB787002811ED /* WCharacter.h */,
-				36F36846169BB787002811ED /* WConstants.h */,
-				36F36847169BB787002811ED /* WInterrupts.c */,
-				36F36849169BB787002811ED /* wiring_analog.c */,
-				36F3684B169BB787002811ED /* wiring_digital.c */,
-				36F3684D169BB787002811ED /* wiring_private.h */,
-				36F3684E169BB787002811ED /* wiring_pulse.c */,
-				36F36850169BB787002811ED /* wiring_shift.c */,
-				36F36852169BB787002811ED /* wiring.c */,
-				36F36854169BB787002811ED /* wiring.h */,
-				36F36855169BB787002811ED /* WMath.cpp */,
-				36F36857169BB787002811ED /* WProgram.h */,
-				36F36858169BB787002811ED /* WString.cpp */,
-				36F3685A169BB787002811ED /* WString.h */,
-				36F366E0169BB785002811ED /* avr */,
 				36F366F3169BB785002811ED /* sam */,
 			);
 			name = arduino;
-			sourceTree = "<group>";
-		};
-		36F366E0169BB785002811ED /* avr */ = {
-			isa = PBXGroup;
-			children = (
-				36F366E1169BB785002811ED /* Arduino.h */,
-				36F366E2169BB785002811ED /* binary.h */,
-				36F366E3169BB785002811ED /* Client.h */,
-				36F366E4169BB785002811ED /* HardwareSerial.h */,
-				36F366E5169BB785002811ED /* IPAddress.h */,
-				36F366E6169BB785002811ED /* new.h */,
-				36F366E7169BB785002811ED /* Platform.h */,
-				36F366E8169BB785002811ED /* Print.h */,
-				36F366E9169BB785002811ED /* Printable.h */,
-				36F366EA169BB785002811ED /* Server.h */,
-				36F366EB169BB785002811ED /* Stream.h */,
-				36F366EC169BB785002811ED /* Udp.h */,
-				36F366ED169BB785002811ED /* USBAPI.h */,
-				36F366EE169BB785002811ED /* USBCore.h */,
-				36F366EF169BB785002811ED /* USBDesc.h */,
-				36F366F0169BB785002811ED /* WCharacter.h */,
-				36F366F1169BB785002811ED /* wiring_private.h */,
-				36F366F2169BB785002811ED /* WString.h */,
-				36F36713169BB785002811ED /* WInterrupts.c */,
-				36F36715169BB785002811ED /* wiring.c */,
-				36F36717169BB785002811ED /* wiring_analog.c */,
-				36F36719169BB785002811ED /* wiring_digital.c */,
-				36F3671B169BB785002811ED /* wiring_pulse.c */,
-				36F3671D169BB785002811ED /* wiring_shift.c */,
-				36F36731169BB785002811ED /* CDC.cpp */,
-				36F36733169BB785002811ED /* HardwareSerial.cpp */,
-				36F36735169BB785002811ED /* HID.cpp */,
-				36F36737169BB785002811ED /* IPAddress.cpp */,
-				36F36739169BB785002811ED /* main.cpp */,
-				36F3673B169BB785002811ED /* new.cpp */,
-				36F3673D169BB785002811ED /* Print.cpp */,
-				36F3673F169BB785002811ED /* Stream.cpp */,
-				36F36741169BB786002811ED /* Tone.cpp */,
-				36F36743169BB786002811ED /* USBCore.cpp */,
-				36F36745169BB786002811ED /* WMath.cpp */,
-				36F36747169BB786002811ED /* WString.cpp */,
-			);
-			name = avr;
 			sourceTree = "<group>";
 		};
 		36F366F3169BB785002811ED /* sam */ = {
@@ -3872,12 +3684,6 @@
 				36F366D5169BB785002811ED /* main.cpp in Sources */,
 				36F366D7169BB785002811ED /* LocalLibrary.cpp in Sources */,
 				36F366DA169BB785002811ED /* Makefile in Sources */,
-				36F36714169BB785002811ED /* WInterrupts.c in Sources */,
-				36F36716169BB785002811ED /* wiring.c in Sources */,
-				36F36718169BB785002811ED /* wiring_analog.c in Sources */,
-				36F3671A169BB785002811ED /* wiring_digital.c in Sources */,
-				36F3671C169BB785002811ED /* wiring_pulse.c in Sources */,
-				36F3671E169BB785002811ED /* wiring_shift.c in Sources */,
 				36F36720169BB785002811ED /* cortex_handlers.c in Sources */,
 				36F36722169BB785002811ED /* iar_calls_sam3.c in Sources */,
 				36F36724169BB785002811ED /* itoa.c in Sources */,
@@ -3887,18 +3693,6 @@
 				36F3672C169BB785002811ED /* wiring_analog.c in Sources */,
 				36F3672E169BB785002811ED /* wiring_digital.c in Sources */,
 				36F36730169BB785002811ED /* wiring_shift.c in Sources */,
-				36F36732169BB785002811ED /* CDC.cpp in Sources */,
-				36F36734169BB785002811ED /* HardwareSerial.cpp in Sources */,
-				36F36736169BB785002811ED /* HID.cpp in Sources */,
-				36F36738169BB785002811ED /* IPAddress.cpp in Sources */,
-				36F3673A169BB785002811ED /* main.cpp in Sources */,
-				36F3673C169BB785002811ED /* new.cpp in Sources */,
-				36F3673E169BB785002811ED /* Print.cpp in Sources */,
-				36F36740169BB786002811ED /* Stream.cpp in Sources */,
-				36F36742169BB786002811ED /* Tone.cpp in Sources */,
-				36F36744169BB786002811ED /* USBCore.cpp in Sources */,
-				36F36746169BB786002811ED /* WMath.cpp in Sources */,
-				36F36748169BB786002811ED /* WString.cpp in Sources */,
 				36F3674A169BB786002811ED /* cxxabi-compat.cpp in Sources */,
 				36F3674C169BB786002811ED /* IPAddress.cpp in Sources */,
 				36F3674E169BB786002811ED /* main.cpp in Sources */,
@@ -3963,24 +3757,6 @@
 				36F3681C169BB787002811ED /* Sd2Card.cpp in Sources */,
 				36F3681E169BB787002811ED /* SdFile.cpp in Sources */,
 				36F36820169BB787002811ED /* SdVolume.cpp in Sources */,
-				36F36824169BB787002811ED /* CDC.cpp in Sources */,
-				36F36827169BB787002811ED /* HardwareSerial.cpp in Sources */,
-				36F3682A169BB787002811ED /* HID.cpp in Sources */,
-				36F3682C169BB787002811ED /* IPAddress.cpp in Sources */,
-				36F3682F169BB787002811ED /* new.cpp in Sources */,
-				36F36832169BB787002811ED /* pins_arduino.c in Sources */,
-				36F36836169BB787002811ED /* Print.cpp in Sources */,
-				36F3683B169BB787002811ED /* Stream.cpp in Sources */,
-				36F3683E169BB787002811ED /* Tone.cpp in Sources */,
-				36F36842169BB787002811ED /* USBCore.cpp in Sources */,
-				36F36848169BB787002811ED /* WInterrupts.c in Sources */,
-				36F3684A169BB787002811ED /* wiring_analog.c in Sources */,
-				36F3684C169BB787002811ED /* wiring_digital.c in Sources */,
-				36F3684F169BB787002811ED /* wiring_pulse.c in Sources */,
-				36F36851169BB787002811ED /* wiring_shift.c in Sources */,
-				36F36853169BB787002811ED /* wiring.c in Sources */,
-				36F36856169BB787002811ED /* WMath.cpp in Sources */,
-				36F36859169BB787002811ED /* WString.cpp in Sources */,
 				36F3685D169BB787002811ED /* EEPROM.cpp in Sources */,
 				36F36861169BB787002811ED /* Client.cpp in Sources */,
 				36F36864169BB787002811ED /* Ethernet.cpp in Sources */,
