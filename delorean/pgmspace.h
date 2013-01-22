@@ -13,7 +13,7 @@
 #include <inttypes.h>
 
 #define PROGMEM
-#define PGM_P  const char *
+#define PGM_P const char *
 #define PSTR(str) (str)
 
 typedef void prog_void;

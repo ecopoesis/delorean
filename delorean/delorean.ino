@@ -38,17 +38,17 @@
 
 // Core library for code-sense
 #include "Arduino.h"
-#include <WMath.h>
+#include "WMath.h"
 
 #include "Wakeup.h"
 #include "ST7565.h"
 
-// pin 9 - Serial data out (SID)
-// pin 8 - Serial clock out (SCLK)
-// pin 7 - Data/Command select (RS or A0)
-// pin 6 - LCD reset (RST)
-// pin 5 - LCD chip select (CS)
-ST7565 glcd(9, 8, 7, 6, 5);
+// pin 8 - Serial data out (SID) - orange
+// pin 7 - Serial clock out (SCLK) - yellow
+// pin 6 - Data/Command select (RS or A0) - green
+// pin 5 - LCD reset (RST) - blue
+// pin 4 - LCD chip select (CS) - white
+ST7565 glcd(8, 7, 6, 5, 4);
 
 #define LOGO16_GLCD_HEIGHT 16
 #define LOGO16_GLCD_WIDTH  16
@@ -59,26 +59,12 @@ static unsigned char __attribute__ ((progmem)) logo16_glcd_bmp[]={
     0x20, 0x3c, 0x3f, 0x3f, 0x1f, 0x19, 0x1f, 0x7b, 0xfb, 0xfe, 0xfe, 0x07, 0x07, 0x07, 0x03, 0x00, };
 
 // the LCD backlight is connected up to a pin so you can turn it on & off
-#define BACKLIGHT_LED 10
+#define BACKLIGHT_LED_R 9
+#define BACKLIGHT_LED_G 10
+#define BACKLIGHT_LED_B 11
 
 void loop()
 {}
-
-// this handy function will return the number of bytes currently free in RAM, great for debugging!
-int freeRam(void)
-{
-    extern int  __bss_end;
-    extern int  *__brkval;
-    int free_memory;
-    if((int)__brkval == 0) {
-        free_memory = ((int)&free_memory) - ((int)&__bss_end);
-    }
-    else {
-        free_memory = ((int)&free_memory) - ((int)__brkval);
-    }
-    return free_memory;
-}
-
 
 #define NUMFLAKES 10
 #define XPOS 0
@@ -87,13 +73,13 @@ int freeRam(void)
 
 void testdrawbitmap(const uint8_t *bitmap, uint8_t w, uint8_t h) {
     uint8_t icons[NUMFLAKES][3];
-    srandom(666);     // whatever seed
+    randomSeed(666);     // whatever seed
     
     // initialize
     for (uint8_t f=0; f< NUMFLAKES; f++) {
-        icons[f][XPOS] = random() % 128;
+        icons[f][XPOS] = random(128);
         icons[f][YPOS] = 0;
-        icons[f][DELTAY] = random() % 5 + 1;
+        icons[f][DELTAY] = random(5) + 1;
     }
     
     while (1) {
@@ -111,9 +97,9 @@ void testdrawbitmap(const uint8_t *bitmap, uint8_t w, uint8_t h) {
             icons[f][YPOS] += icons[f][DELTAY];
             // if its gone, reinit
             if (icons[f][YPOS] > 64) {
-                icons[f][XPOS] = random() % 128;
+                icons[f][XPOS] = random(128);
                 icons[f][YPOS] = 0;
-                icons[f][DELTAY] = random() % 5 + 1;
+                icons[f][DELTAY] = random(5) + 1;
             }
         }
     }
@@ -168,12 +154,26 @@ void testdrawline() {
 // The setup() method runs once, when the sketch starts
 void setup()   {
     Serial.begin(9600);
-    
-    Serial.print(freeRam());
+    Serial.println("hello");
+    //Serial.print(freeRam());
     
     // turn on backlight
-    pinMode(BACKLIGHT_LED, OUTPUT);
-    digitalWrite(BACKLIGHT_LED, HIGH);
+    pinMode(BACKLIGHT_LED_R, OUTPUT);
+    pinMode(BACKLIGHT_LED_G, OUTPUT);
+    pinMode(BACKLIGHT_LED_B, OUTPUT);
+    
+    digitalWrite(BACKLIGHT_LED_R, HIGH);
+    digitalWrite(BACKLIGHT_LED_G, HIGH);
+    digitalWrite(BACKLIGHT_LED_B, HIGH);
+    
+    Serial.println("red!");
+    digitalWrite(BACKLIGHT_LED_R, LOW);
+    delay(2000);
+    Serial.println("green!");
+    digitalWrite(BACKLIGHT_LED_G, LOW);
+    delay(2000);
+    Serial.println("blue!");
+    digitalWrite(BACKLIGHT_LED_B, LOW);
     
     // initialize and set the contrast to 0x18
     glcd.begin(0x18);
@@ -182,6 +182,7 @@ void setup()   {
     delay(2000);
     glcd.clear();
     
+   
     // draw a single pixel
     glcd.setpixel(10, 10, BLACK);
     glcd.display();        // show the changes to the buffer
