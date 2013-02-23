@@ -391,6 +391,102 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3612EFC516D94960004ADF13 /* U8glib.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = U8glib.cpp; sourceTree = "<group>"; };
+		3612EFC616D94960004ADF13 /* U8glib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = U8glib.h; sourceTree = "<group>"; };
+		3657D62816D963B8000CE6D2 /* chessengine.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = chessengine.c; sourceTree = "<group>"; };
+		3657D62916D963B8000CE6D2 /* u8g_bitmap.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = u8g_bitmap.c; sourceTree = "<group>"; };
+		3657D62A16D963B8000CE6D2 /* u8g_circle.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = u8g_circle.c; sourceTree = "<group>"; };
+		3657D62B16D963B8000CE6D2 /* u8g_clip.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = u8g_clip.c; sourceTree = "<group>"; };
+		3657D62C16D963B8000CE6D2 /* u8g_com_api_16gr.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = u8g_com_api_16gr.c; sourceTree = "<group>"; };
+		3657D62D16D963B8000CE6D2 /* u8g_com_api.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = u8g_com_api.c; sourceTree = "<group>"; };
+		3657D62E16D963B8000CE6D2 /* u8g_com_arduino_common.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = u8g_com_arduino_common.c; sourceTree = "<group>"; };
+		3657D62F16D963B8000CE6D2 /* u8g_com_arduino_fast_parallel.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = u8g_com_arduino_fast_parallel.c; sourceTree = "<group>"; };
+		3657D63016D963B8000CE6D2 /* u8g_com_arduino_hw_spi.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = u8g_com_arduino_hw_spi.c; sourceTree = "<group>"; };
+		3657D63116D963B8000CE6D2 /* u8g_com_arduino_no_en_parallel.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = u8g_com_arduino_no_en_parallel.c; sourceTree = "<group>"; };
+		3657D63216D963B8000CE6D2 /* u8g_com_arduino_parallel.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = u8g_com_arduino_parallel.c; sourceTree = "<group>"; };
+		3657D63316D963B8000CE6D2 /* u8g_com_arduino_port_d_wr.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = u8g_com_arduino_port_d_wr.c; sourceTree = "<group>"; };
+		3657D63416D963B8000CE6D2 /* u8g_com_arduino_ssd_i2c.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = u8g_com_arduino_ssd_i2c.c; sourceTree = "<group>"; };
+		3657D63516D963B8000CE6D2 /* u8g_com_arduino_st7920_hw_spi.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = u8g_com_arduino_st7920_hw_spi.c; sourceTree = "<group>"; };
+		3657D63616D963B8000CE6D2 /* u8g_com_arduino_st7920_spi.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = u8g_com_arduino_st7920_spi.c; sourceTree = "<group>"; };
+		3657D63716D963B8000CE6D2 /* u8g_com_arduino_std_sw_spi.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = u8g_com_arduino_std_sw_spi.c; sourceTree = "<group>"; };
+		3657D63816D963B8000CE6D2 /* u8g_com_arduino_sw_spi.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = u8g_com_arduino_sw_spi.c; sourceTree = "<group>"; };
+		3657D63916D963B8000CE6D2 /* u8g_com_arduino_t6963.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = u8g_com_arduino_t6963.c; sourceTree = "<group>"; };
+		3657D63A16D963B8000CE6D2 /* u8g_com_atmega_hw_spi.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = u8g_com_atmega_hw_spi.c; sourceTree = "<group>"; };
+		3657D63B16D963B8000CE6D2 /* u8g_com_atmega_parallel.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = u8g_com_atmega_parallel.c; sourceTree = "<group>"; };
+		3657D63C16D963B8000CE6D2 /* u8g_com_atmega_st7920_hw_spi.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = u8g_com_atmega_st7920_hw_spi.c; sourceTree = "<group>"; };
+		3657D63D16D963B8000CE6D2 /* u8g_com_atmega_st7920_spi.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = u8g_com_atmega_st7920_spi.c; sourceTree = "<group>"; };
+		3657D63E16D963B8000CE6D2 /* u8g_com_atmega_sw_spi.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = u8g_com_atmega_sw_spi.c; sourceTree = "<group>"; };
+		3657D63F16D963B8000CE6D2 /* u8g_com_i2c.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = u8g_com_i2c.c; sourceTree = "<group>"; };
+		3657D64016D963B8000CE6D2 /* u8g_com_io.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = u8g_com_io.c; sourceTree = "<group>"; };
+		3657D64116D963B8000CE6D2 /* u8g_com_null.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = u8g_com_null.c; sourceTree = "<group>"; };
+		3657D64216D963B8000CE6D2 /* u8g_cursor.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = u8g_cursor.c; sourceTree = "<group>"; };
+		3657D64316D963B8000CE6D2 /* u8g_delay.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = u8g_delay.c; sourceTree = "<group>"; };
+		3657D64416D963B8000CE6D2 /* u8g_dev_flipdisc_2x7.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = u8g_dev_flipdisc_2x7.c; sourceTree = "<group>"; };
+		3657D64516D963B8000CE6D2 /* u8g_dev_gprof.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = u8g_dev_gprof.c; sourceTree = "<group>"; };
+		3657D64616D963B8000CE6D2 /* u8g_dev_ili9325d_320x240.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = u8g_dev_ili9325d_320x240.c; sourceTree = "<group>"; };
+		3657D64716D963B8000CE6D2 /* u8g_dev_ks0108_128x64.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = u8g_dev_ks0108_128x64.c; sourceTree = "<group>"; };
+		3657D64816D963B8000CE6D2 /* u8g_dev_lc7981_160x80.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = u8g_dev_lc7981_160x80.c; sourceTree = "<group>"; };
+		3657D64916D963B8000CE6D2 /* u8g_dev_lc7981_240x64.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = u8g_dev_lc7981_240x64.c; sourceTree = "<group>"; };
+		3657D64A16D963B8000CE6D2 /* u8g_dev_lc7981_240x128.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = u8g_dev_lc7981_240x128.c; sourceTree = "<group>"; };
+		3657D64B16D963B8000CE6D2 /* u8g_dev_lc7981_320x64.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = u8g_dev_lc7981_320x64.c; sourceTree = "<group>"; };
+		3657D64C16D963B8000CE6D2 /* u8g_dev_null.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = u8g_dev_null.c; sourceTree = "<group>"; };
+		3657D64D16D963B8000CE6D2 /* u8g_dev_pcd8544_84x48.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = u8g_dev_pcd8544_84x48.c; sourceTree = "<group>"; };
+		3657D64E16D963B8000CE6D2 /* u8g_dev_pcf8812_96x65.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = u8g_dev_pcf8812_96x65.c; sourceTree = "<group>"; };
+		3657D64F16D963B8000CE6D2 /* u8g_dev_sbn1661_122x32.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = u8g_dev_sbn1661_122x32.c; sourceTree = "<group>"; };
+		3657D65016D963B8000CE6D2 /* u8g_dev_ssd1306_128x32.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = u8g_dev_ssd1306_128x32.c; sourceTree = "<group>"; };
+		3657D65116D963B8000CE6D2 /* u8g_dev_ssd1306_128x64.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = u8g_dev_ssd1306_128x64.c; sourceTree = "<group>"; };
+		3657D65216D963B8000CE6D2 /* u8g_dev_ssd1309_128x64.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = u8g_dev_ssd1309_128x64.c; sourceTree = "<group>"; };
+		3657D65316D963B8000CE6D2 /* u8g_dev_ssd1322_nhd31oled_bw.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = u8g_dev_ssd1322_nhd31oled_bw.c; sourceTree = "<group>"; };
+		3657D65416D963B8000CE6D2 /* u8g_dev_ssd1322_nhd31oled_gr.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = u8g_dev_ssd1322_nhd31oled_gr.c; sourceTree = "<group>"; };
+		3657D65516D963B8000CE6D2 /* u8g_dev_ssd1325_nhd27oled_bw_new.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = u8g_dev_ssd1325_nhd27oled_bw_new.c; sourceTree = "<group>"; };
+		3657D65616D963B8000CE6D2 /* u8g_dev_ssd1325_nhd27oled_bw.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = u8g_dev_ssd1325_nhd27oled_bw.c; sourceTree = "<group>"; };
+		3657D65716D963B8000CE6D2 /* u8g_dev_ssd1325_nhd27oled_gr_new.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = u8g_dev_ssd1325_nhd27oled_gr_new.c; sourceTree = "<group>"; };
+		3657D65816D963B8000CE6D2 /* u8g_dev_ssd1325_nhd27oled_gr.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = u8g_dev_ssd1325_nhd27oled_gr.c; sourceTree = "<group>"; };
+		3657D65916D963B8000CE6D2 /* u8g_dev_ssd1327_96x96_gr.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = u8g_dev_ssd1327_96x96_gr.c; sourceTree = "<group>"; };
+		3657D65A16D963B8000CE6D2 /* u8g_dev_st7565_64128n.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = u8g_dev_st7565_64128n.c; sourceTree = "<group>"; };
+		3657D65B16D963B8000CE6D2 /* u8g_dev_st7565_dogm128.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = u8g_dev_st7565_dogm128.c; sourceTree = "<group>"; };
+		3657D65C16D963B8000CE6D2 /* u8g_dev_st7565_dogm132.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = u8g_dev_st7565_dogm132.c; sourceTree = "<group>"; };
+		3657D65D16D963B8000CE6D2 /* u8g_dev_st7565_lm6059.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = u8g_dev_st7565_lm6059.c; sourceTree = "<group>"; };
+		3657D65E16D963B8000CE6D2 /* u8g_dev_st7565_lm6063.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = u8g_dev_st7565_lm6063.c; sourceTree = "<group>"; };
+		3657D65F16D963B8000CE6D2 /* u8g_dev_st7565_nhd_c12832.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = u8g_dev_st7565_nhd_c12832.c; sourceTree = "<group>"; };
+		3657D66016D963B8000CE6D2 /* u8g_dev_st7565_nhd_c12864.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = u8g_dev_st7565_nhd_c12864.c; sourceTree = "<group>"; };
+		3657D66116D963B8000CE6D2 /* u8g_dev_st7687_c144mvgd.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = u8g_dev_st7687_c144mvgd.c; sourceTree = "<group>"; };
+		3657D66216D963B8000CE6D2 /* u8g_dev_st7920_128x64.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = u8g_dev_st7920_128x64.c; sourceTree = "<group>"; };
+		3657D66316D963B8000CE6D2 /* u8g_dev_st7920_192x32.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = u8g_dev_st7920_192x32.c; sourceTree = "<group>"; };
+		3657D66416D963B8000CE6D2 /* u8g_dev_st7920_202x32.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = u8g_dev_st7920_202x32.c; sourceTree = "<group>"; };
+		3657D66516D963B8000CE6D2 /* u8g_dev_t6963_128x64.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = u8g_dev_t6963_128x64.c; sourceTree = "<group>"; };
+		3657D66616D963B8000CE6D2 /* u8g_dev_t6963_240x64.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = u8g_dev_t6963_240x64.c; sourceTree = "<group>"; };
+		3657D66716D963B8000CE6D2 /* u8g_dev_t6963_240x128.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = u8g_dev_t6963_240x128.c; sourceTree = "<group>"; };
+		3657D66816D963B8000CE6D2 /* u8g_dev_tls8204_84x48.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = u8g_dev_tls8204_84x48.c; sourceTree = "<group>"; };
+		3657D66916D963B8000CE6D2 /* u8g_dev_uc1610_dogxl160.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = u8g_dev_uc1610_dogxl160.c; sourceTree = "<group>"; };
+		3657D66A16D963B8000CE6D2 /* u8g_dev_uc1701_dogs102.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = u8g_dev_uc1701_dogs102.c; sourceTree = "<group>"; };
+		3657D66B16D963B8000CE6D2 /* u8g_dev_uc1701_mini12864.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = u8g_dev_uc1701_mini12864.c; sourceTree = "<group>"; };
+		3657D66C16D963B8000CE6D2 /* u8g_ellipse.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = u8g_ellipse.c; sourceTree = "<group>"; };
+		3657D66D16D963B8000CE6D2 /* u8g_font_data.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = u8g_font_data.c; sourceTree = "<group>"; };
+		3657D66E16D963B8000CE6D2 /* u8g_font.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = u8g_font.c; sourceTree = "<group>"; };
+		3657D66F16D963B8000CE6D2 /* u8g_line.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = u8g_line.c; sourceTree = "<group>"; };
+		3657D67016D963B8000CE6D2 /* u8g_ll_api.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = u8g_ll_api.c; sourceTree = "<group>"; };
+		3657D67116D963B8000CE6D2 /* u8g_page.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = u8g_page.c; sourceTree = "<group>"; };
+		3657D67216D963B8000CE6D2 /* u8g_pb.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = u8g_pb.c; sourceTree = "<group>"; };
+		3657D67316D963B8000CE6D2 /* u8g_pb8h1.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = u8g_pb8h1.c; sourceTree = "<group>"; };
+		3657D67416D963B8000CE6D2 /* u8g_pb8h1f.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = u8g_pb8h1f.c; sourceTree = "<group>"; };
+		3657D67516D963B8000CE6D2 /* u8g_pb8h2.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = u8g_pb8h2.c; sourceTree = "<group>"; };
+		3657D67616D963B8000CE6D2 /* u8g_pb8h8.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = u8g_pb8h8.c; sourceTree = "<group>"; };
+		3657D67716D963B8000CE6D2 /* u8g_pb8v1.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = u8g_pb8v1.c; sourceTree = "<group>"; };
+		3657D67816D963B8000CE6D2 /* u8g_pb8v2.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = u8g_pb8v2.c; sourceTree = "<group>"; };
+		3657D67916D963B8000CE6D2 /* u8g_pb14v1.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = u8g_pb14v1.c; sourceTree = "<group>"; };
+		3657D67A16D963B8000CE6D2 /* u8g_pb16h1.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = u8g_pb16h1.c; sourceTree = "<group>"; };
+		3657D67B16D963B8000CE6D2 /* u8g_pb16h2.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = u8g_pb16h2.c; sourceTree = "<group>"; };
+		3657D67C16D963B8000CE6D2 /* u8g_pb16v1.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = u8g_pb16v1.c; sourceTree = "<group>"; };
+		3657D67D16D963B8000CE6D2 /* u8g_pb16v2.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = u8g_pb16v2.c; sourceTree = "<group>"; };
+		3657D67E16D963B8000CE6D2 /* u8g_rect.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = u8g_rect.c; sourceTree = "<group>"; };
+		3657D67F16D963B8000CE6D2 /* u8g_rot.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = u8g_rot.c; sourceTree = "<group>"; };
+		3657D68016D963B8000CE6D2 /* u8g_scale.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = u8g_scale.c; sourceTree = "<group>"; };
+		3657D68116D963B8000CE6D2 /* u8g_state.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = u8g_state.c; sourceTree = "<group>"; };
+		3657D68216D963B8000CE6D2 /* u8g_u8toa.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = u8g_u8toa.c; sourceTree = "<group>"; };
+		3657D68316D963B8000CE6D2 /* u8g_u16toa.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = u8g_u16toa.c; sourceTree = "<group>"; };
+		3657D68416D963B8000CE6D2 /* u8g_virtual_screen.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = u8g_virtual_screen.c; sourceTree = "<group>"; };
+		3657D68516D963B8000CE6D2 /* u8g.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = u8g.h; sourceTree = "<group>"; };
 		369C244C16A642C20033B2E9 /* glcdfont.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = glcdfont.c; sourceTree = "<group>"; };
 		369C244D16A642C20033B2E9 /* ST7565.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ST7565.cpp; sourceTree = "<group>"; };
 		369C244E16A642C20033B2E9 /* ST7565.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ST7565.h; sourceTree = "<group>"; };
@@ -1307,6 +1403,125 @@
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
+		363EB47816D962A600CF20A6 /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				363EB47A16D962E300CF20A6 /* U8glib */,
+			);
+			name = libs;
+			sourceTree = "<group>";
+		};
+		363EB47A16D962E300CF20A6 /* U8glib */ = {
+			isa = PBXGroup;
+			children = (
+				363EB47B16D962FB00CF20A6 /* utility */,
+				3612EFC516D94960004ADF13 /* U8glib.cpp */,
+				3612EFC616D94960004ADF13 /* U8glib.h */,
+			);
+			name = U8glib;
+			sourceTree = "<group>";
+		};
+		363EB47B16D962FB00CF20A6 /* utility */ = {
+			isa = PBXGroup;
+			children = (
+				3657D62816D963B8000CE6D2 /* chessengine.c */,
+				3657D62916D963B8000CE6D2 /* u8g_bitmap.c */,
+				3657D62A16D963B8000CE6D2 /* u8g_circle.c */,
+				3657D62B16D963B8000CE6D2 /* u8g_clip.c */,
+				3657D62C16D963B8000CE6D2 /* u8g_com_api_16gr.c */,
+				3657D62D16D963B8000CE6D2 /* u8g_com_api.c */,
+				3657D62E16D963B8000CE6D2 /* u8g_com_arduino_common.c */,
+				3657D62F16D963B8000CE6D2 /* u8g_com_arduino_fast_parallel.c */,
+				3657D63016D963B8000CE6D2 /* u8g_com_arduino_hw_spi.c */,
+				3657D63116D963B8000CE6D2 /* u8g_com_arduino_no_en_parallel.c */,
+				3657D63216D963B8000CE6D2 /* u8g_com_arduino_parallel.c */,
+				3657D63316D963B8000CE6D2 /* u8g_com_arduino_port_d_wr.c */,
+				3657D63416D963B8000CE6D2 /* u8g_com_arduino_ssd_i2c.c */,
+				3657D63516D963B8000CE6D2 /* u8g_com_arduino_st7920_hw_spi.c */,
+				3657D63616D963B8000CE6D2 /* u8g_com_arduino_st7920_spi.c */,
+				3657D63716D963B8000CE6D2 /* u8g_com_arduino_std_sw_spi.c */,
+				3657D63816D963B8000CE6D2 /* u8g_com_arduino_sw_spi.c */,
+				3657D63916D963B8000CE6D2 /* u8g_com_arduino_t6963.c */,
+				3657D63A16D963B8000CE6D2 /* u8g_com_atmega_hw_spi.c */,
+				3657D63B16D963B8000CE6D2 /* u8g_com_atmega_parallel.c */,
+				3657D63C16D963B8000CE6D2 /* u8g_com_atmega_st7920_hw_spi.c */,
+				3657D63D16D963B8000CE6D2 /* u8g_com_atmega_st7920_spi.c */,
+				3657D63E16D963B8000CE6D2 /* u8g_com_atmega_sw_spi.c */,
+				3657D63F16D963B8000CE6D2 /* u8g_com_i2c.c */,
+				3657D64016D963B8000CE6D2 /* u8g_com_io.c */,
+				3657D64116D963B8000CE6D2 /* u8g_com_null.c */,
+				3657D64216D963B8000CE6D2 /* u8g_cursor.c */,
+				3657D64316D963B8000CE6D2 /* u8g_delay.c */,
+				3657D64416D963B8000CE6D2 /* u8g_dev_flipdisc_2x7.c */,
+				3657D64516D963B8000CE6D2 /* u8g_dev_gprof.c */,
+				3657D64616D963B8000CE6D2 /* u8g_dev_ili9325d_320x240.c */,
+				3657D64716D963B8000CE6D2 /* u8g_dev_ks0108_128x64.c */,
+				3657D64816D963B8000CE6D2 /* u8g_dev_lc7981_160x80.c */,
+				3657D64916D963B8000CE6D2 /* u8g_dev_lc7981_240x64.c */,
+				3657D64A16D963B8000CE6D2 /* u8g_dev_lc7981_240x128.c */,
+				3657D64B16D963B8000CE6D2 /* u8g_dev_lc7981_320x64.c */,
+				3657D64C16D963B8000CE6D2 /* u8g_dev_null.c */,
+				3657D64D16D963B8000CE6D2 /* u8g_dev_pcd8544_84x48.c */,
+				3657D64E16D963B8000CE6D2 /* u8g_dev_pcf8812_96x65.c */,
+				3657D64F16D963B8000CE6D2 /* u8g_dev_sbn1661_122x32.c */,
+				3657D65016D963B8000CE6D2 /* u8g_dev_ssd1306_128x32.c */,
+				3657D65116D963B8000CE6D2 /* u8g_dev_ssd1306_128x64.c */,
+				3657D65216D963B8000CE6D2 /* u8g_dev_ssd1309_128x64.c */,
+				3657D65316D963B8000CE6D2 /* u8g_dev_ssd1322_nhd31oled_bw.c */,
+				3657D65416D963B8000CE6D2 /* u8g_dev_ssd1322_nhd31oled_gr.c */,
+				3657D65516D963B8000CE6D2 /* u8g_dev_ssd1325_nhd27oled_bw_new.c */,
+				3657D65616D963B8000CE6D2 /* u8g_dev_ssd1325_nhd27oled_bw.c */,
+				3657D65716D963B8000CE6D2 /* u8g_dev_ssd1325_nhd27oled_gr_new.c */,
+				3657D65816D963B8000CE6D2 /* u8g_dev_ssd1325_nhd27oled_gr.c */,
+				3657D65916D963B8000CE6D2 /* u8g_dev_ssd1327_96x96_gr.c */,
+				3657D65A16D963B8000CE6D2 /* u8g_dev_st7565_64128n.c */,
+				3657D65B16D963B8000CE6D2 /* u8g_dev_st7565_dogm128.c */,
+				3657D65C16D963B8000CE6D2 /* u8g_dev_st7565_dogm132.c */,
+				3657D65D16D963B8000CE6D2 /* u8g_dev_st7565_lm6059.c */,
+				3657D65E16D963B8000CE6D2 /* u8g_dev_st7565_lm6063.c */,
+				3657D65F16D963B8000CE6D2 /* u8g_dev_st7565_nhd_c12832.c */,
+				3657D66016D963B8000CE6D2 /* u8g_dev_st7565_nhd_c12864.c */,
+				3657D66116D963B8000CE6D2 /* u8g_dev_st7687_c144mvgd.c */,
+				3657D66216D963B8000CE6D2 /* u8g_dev_st7920_128x64.c */,
+				3657D66316D963B8000CE6D2 /* u8g_dev_st7920_192x32.c */,
+				3657D66416D963B8000CE6D2 /* u8g_dev_st7920_202x32.c */,
+				3657D66516D963B8000CE6D2 /* u8g_dev_t6963_128x64.c */,
+				3657D66616D963B8000CE6D2 /* u8g_dev_t6963_240x64.c */,
+				3657D66716D963B8000CE6D2 /* u8g_dev_t6963_240x128.c */,
+				3657D66816D963B8000CE6D2 /* u8g_dev_tls8204_84x48.c */,
+				3657D66916D963B8000CE6D2 /* u8g_dev_uc1610_dogxl160.c */,
+				3657D66A16D963B8000CE6D2 /* u8g_dev_uc1701_dogs102.c */,
+				3657D66B16D963B8000CE6D2 /* u8g_dev_uc1701_mini12864.c */,
+				3657D66C16D963B8000CE6D2 /* u8g_ellipse.c */,
+				3657D66D16D963B8000CE6D2 /* u8g_font_data.c */,
+				3657D66E16D963B8000CE6D2 /* u8g_font.c */,
+				3657D66F16D963B8000CE6D2 /* u8g_line.c */,
+				3657D67016D963B8000CE6D2 /* u8g_ll_api.c */,
+				3657D67116D963B8000CE6D2 /* u8g_page.c */,
+				3657D67216D963B8000CE6D2 /* u8g_pb.c */,
+				3657D67316D963B8000CE6D2 /* u8g_pb8h1.c */,
+				3657D67416D963B8000CE6D2 /* u8g_pb8h1f.c */,
+				3657D67516D963B8000CE6D2 /* u8g_pb8h2.c */,
+				3657D67616D963B8000CE6D2 /* u8g_pb8h8.c */,
+				3657D67716D963B8000CE6D2 /* u8g_pb8v1.c */,
+				3657D67816D963B8000CE6D2 /* u8g_pb8v2.c */,
+				3657D67916D963B8000CE6D2 /* u8g_pb14v1.c */,
+				3657D67A16D963B8000CE6D2 /* u8g_pb16h1.c */,
+				3657D67B16D963B8000CE6D2 /* u8g_pb16h2.c */,
+				3657D67C16D963B8000CE6D2 /* u8g_pb16v1.c */,
+				3657D67D16D963B8000CE6D2 /* u8g_pb16v2.c */,
+				3657D67E16D963B8000CE6D2 /* u8g_rect.c */,
+				3657D67F16D963B8000CE6D2 /* u8g_rot.c */,
+				3657D68016D963B8000CE6D2 /* u8g_scale.c */,
+				3657D68116D963B8000CE6D2 /* u8g_state.c */,
+				3657D68216D963B8000CE6D2 /* u8g_u8toa.c */,
+				3657D68316D963B8000CE6D2 /* u8g_u16toa.c */,
+				3657D68416D963B8000CE6D2 /* u8g_virtual_screen.c */,
+				3657D68516D963B8000CE6D2 /* u8g.h */,
+			);
+			name = utility;
+			sourceTree = "<group>";
+		};
 		36F366BD169BB785002811ED = {
 			isa = PBXGroup;
 			children = (
@@ -1326,6 +1541,7 @@
 		36F366D3169BB785002811ED /* delorean */ = {
 			isa = PBXGroup;
 			children = (
+				363EB47816D962A600CF20A6 /* libs */,
 				369C244C16A642C20033B2E9 /* glcdfont.c */,
 				369C244D16A642C20033B2E9 /* ST7565.cpp */,
 				369C244E16A642C20033B2E9 /* ST7565.h */,
@@ -3646,7 +3862,7 @@
 		36F366BF169BB785002811ED /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0450;
+				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "Michael Roberts";
 			};
 			buildConfigurationList = 36F366C2169BB785002811ED /* Build configuration list for PBXProject "delorean" */;
@@ -4091,7 +4307,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PATH = "$(PATH):$(PROJECT_DIR)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKETCHBOOK_DIR = "";
+				SKETCHBOOK_DIR = /Users/miker/Documents/Arduino/;
 				SKETCH_EXTENSION = ino;
 			};
 			name = Debug;
@@ -4112,7 +4328,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PATH = "$(PATH):$(PROJECT_DIR)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKETCHBOOK_DIR = "";
+				SKETCHBOOK_DIR = /Users/miker/Documents/Arduino/;
 				SKETCH_EXTENSION = ino;
 			};
 			name = Release;

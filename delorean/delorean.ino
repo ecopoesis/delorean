@@ -41,14 +41,16 @@
 #include "WMath.h"
 
 #include "Wakeup.h"
-#include "ST7565.h"
+//#include "ST7565.h"
+#include "U8glib.h"
 
 // pin 8 - Serial data out (SID) - orange
 // pin 7 - Serial clock out (SCLK) - yellow
 // pin 6 - Data/Command select (RS or A0) - green
 // pin 5 - LCD reset (RST) - blue
 // pin 4 - LCD chip select (CS) - white
-ST7565 glcd(8, 7, 6, 5, 4);
+
+//ST7565 glcd(8, 7, 6, 5, 4);
 
 #define LOGO16_GLCD_HEIGHT 16
 #define LOGO16_GLCD_WIDTH  16
@@ -63,96 +65,69 @@ static unsigned char __attribute__ ((progmem)) logo16_glcd_bmp[]={
 #define BACKLIGHT_LED_G 10
 #define BACKLIGHT_LED_B 11
 
-void loop()
-{}
-
-#define NUMFLAKES 10
-#define XPOS 0
-#define YPOS 1
-#define DELTAY 2
-
-void testdrawbitmap(const uint8_t *bitmap, uint8_t w, uint8_t h) {
-    uint8_t icons[NUMFLAKES][3];
-    randomSeed(666);     // whatever seed
+/*
+void drawColorBox()
+{
+    u8g_uint_t w,h;
+    u8g_uint_t r, g, b;
     
-    // initialize
-    for (uint8_t f=0; f< NUMFLAKES; f++) {
-        icons[f][XPOS] = random(128);
-        icons[f][YPOS] = 0;
-        icons[f][DELTAY] = random(5) + 1;
-    }
-    
-    while (1) {
-        // draw each icon
-        for (uint8_t f=0; f< NUMFLAKES; f++) {
-            glcd.drawbitmap(icons[f][XPOS], icons[f][YPOS], logo16_glcd_bmp, w, h, BLACK);
-        }
-        glcd.display();
-        delay(200);
-        
-        // then erase it + move it
-        for (uint8_t f=0; f< NUMFLAKES; f++) {
-            glcd.drawbitmap(icons[f][XPOS], icons[f][YPOS],  logo16_glcd_bmp, w, h, 0);
-            // move it
-            icons[f][YPOS] += icons[f][DELTAY];
-            // if its gone, reinit
-            if (icons[f][YPOS] > 64) {
-                icons[f][XPOS] = random(128);
-                icons[f][YPOS] = 0;
-                icons[f][DELTAY] = random(5) + 1;
+    w = u8g.getWidth()/32;
+    h = u8g.getHeight()/8;
+    for( b = 0; b < 4; b++ )
+        for( g = 0; g < 8; g++ )
+            for( r = 0; r < 8; r++ )
+            {
+                u8g.setColorIndex((r<<5) |  (g<<2) | b );
+                u8g.drawBox(g*w + b*w*8, r*h, w, h);
             }
-        }
-    }
 }
 
-
-void testdrawchar(void) {
-    for (uint8_t i=0; i < 168; i++) {
-        glcd.drawchar((i % 21) * 6, i/21, i);
-    }
-}
-
-void testdrawcircle(void) {
-    for (uint8_t i=0; i<64; i+=2) {
-        glcd.drawcircle(63, 31, i, BLACK);
-    }
-}
-
-
-void testdrawrect(void) {
-    for (uint8_t i=0; i<64; i+=2) {
-        glcd.drawrect(i, i, 128-i, 64-i, BLACK);
-    }
-}
-
-void testfillrect(void) {
-    for (uint8_t i=0; i<64; i++) {
-        // alternate colors for moire effect
-        glcd.fillrect(i, i, 128-i, 64-i, i%2);
-    }
-}
-
-void testdrawline() {
-    for (uint8_t i=0; i<128; i+=4) {
-        glcd.drawline(0, 0, i, 63, BLACK);
-    }
-    for (uint8_t i=0; i<64; i+=4) {
-        glcd.drawline(0, 0, 127, i, BLACK);
-    }
+void drawLogo(uint8_t d)
+{
+    u8g.setFont(u8g_font_gdr25r);
+    u8g.drawStr(0+d, 30+d, "U");
+    u8g.setFont(u8g_font_gdr30n);
+    u8g.drawStr90(23+d,10+d,"8");
+    u8g.setFont(u8g_font_gdr25r);
+    u8g.drawStr(53+d,30+d,"g");
     
-    glcd.display();
-    delay(1000);
-    
-    for (uint8_t i=0; i<128; i+=4) {
-        glcd.drawline(i, 63, 0, 0, WHITE);
+    u8g.drawHLine(2+d, 35+d, 47);
+    u8g.drawVLine(45+d, 32+d, 12);
+}
+
+void drawURL(void)
+{
+    u8g.setFont(u8g_font_4x6);
+    if ( u8g.getHeight() < 59 )
+    {
+        u8g.drawStr(53,9,"code.google.com");
+        u8g.drawStr(77,18,"/p/u8glib");
     }
-    for (uint8_t i=0; i<64; i+=4) {
-        glcd.drawline(127, i, 0, 0, WHITE);
+    else
+    {
+        u8g.drawStr(1,54,"code.google.com/p/u8glib");
     }
 }
 
-// The setup() method runs once, when the sketch starts
-void setup()   {
+
+void draw(void) {
+    if ( u8g.getMode() == U8G_MODE_R3G3B2 ) {
+        drawColorBox();
+    }
+    u8g.setColorIndex(1);
+    if ( U8G_MODE_GET_BITS_PER_PIXEL(u8g.getMode()) > 1 ) {
+        drawLogo(2);
+        u8g.setColorIndex(2);
+        drawLogo(1);
+        u8g.setColorIndex(3);
+    }
+    drawLogo(0);
+    drawURL();
+    
+}
+*/
+
+void setup(void) {
     Serial.begin(9600);
     Serial.println("hello");
     //Serial.print(freeRam());
@@ -174,63 +149,21 @@ void setup()   {
     delay(2000);
     Serial.println("blue!");
     digitalWrite(BACKLIGHT_LED_B, LOW);
-    
-    // initialize and set the contrast to 0x18
-    glcd.begin(0x18);
-    
-    glcd.display(); // show splashscreen
-    delay(2000);
-    glcd.clear();
-    
-   
-    // draw a single pixel
-    glcd.setpixel(10, 10, BLACK);
-    glcd.display();        // show the changes to the buffer
-    delay(2000);
-    glcd.clear();
-    
-    // draw many lines
-    testdrawline();
-    glcd.display();       // show the lines
-    delay(2000);
-    glcd.clear();
-    
-    // draw rectangles
-    testdrawrect();
-    glcd.display();
-    delay(2000);
-    glcd.clear();
-    
-    // draw multiple rectangles
-    testfillrect();
-    glcd.display();
-    delay(2000);
-    glcd.clear();
-    
-    // draw mulitple circles
-    testdrawcircle();
-    glcd.display();
-    delay(2000);
-    glcd.clear();
-    
-    // draw a black circle, 10 pixel radius, at location (32,32)
-    glcd.fillcircle(32, 32, 10, BLACK);
-    glcd.display();
-    delay(2000);
-    glcd.clear();
-    
-    // draw the first ~120 characters in the font
-    testdrawchar();
-    glcd.display();
-    delay(2000);
-    glcd.clear();
-    
-    // draw a string at location (0,0)
-    glcd.drawstring(0, 0, "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation");
-    glcd.display();
-    delay(2000);
-    glcd.clear();
-    
-    // draw a bitmap icon and 'animate' movement
-    testdrawbitmap(logo16_glcd_bmp, LOGO16_GLCD_HEIGHT, LOGO16_GLCD_WIDTH);
+
+    U8GLIB_LM6059 u8g(7, 8, 4, 6);
 }
+
+void loop(void) {
+/*
+    // picture loop
+    u8g.firstPage();
+    do {
+        draw();
+        u8g.setColorIndex(1);
+    } while( u8g.nextPage() );
+    
+    // rebuild the picture after some delay
+    delay(2000);
+ */
+}
+
