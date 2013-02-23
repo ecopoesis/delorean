@@ -52,6 +52,9 @@
 
 //ST7565 glcd(8, 7, 6, 5, 4);
 
+U8GLIB_LM6059* u8g = NULL;
+//u8g_t u8g;
+
 #define LOGO16_GLCD_HEIGHT 16
 #define LOGO16_GLCD_WIDTH  16
 
@@ -65,67 +68,66 @@ static unsigned char __attribute__ ((progmem)) logo16_glcd_bmp[]={
 #define BACKLIGHT_LED_G 10
 #define BACKLIGHT_LED_B 11
 
-/*
 void drawColorBox()
 {
     u8g_uint_t w,h;
     u8g_uint_t r, g, b;
     
-    w = u8g.getWidth()/32;
-    h = u8g.getHeight()/8;
+    w = u8g->getWidth()/32;
+    h = u8g->getHeight()/8;
     for( b = 0; b < 4; b++ )
         for( g = 0; g < 8; g++ )
             for( r = 0; r < 8; r++ )
             {
-                u8g.setColorIndex((r<<5) |  (g<<2) | b );
-                u8g.drawBox(g*w + b*w*8, r*h, w, h);
+                u8g->setColorIndex((r<<5) |  (g<<2) | b );
+                u8g->drawBox(g*w + b*w*8, r*h, w, h);
             }
 }
 
 void drawLogo(uint8_t d)
 {
-    u8g.setFont(u8g_font_gdr25r);
-    u8g.drawStr(0+d, 30+d, "U");
-    u8g.setFont(u8g_font_gdr30n);
-    u8g.drawStr90(23+d,10+d,"8");
-    u8g.setFont(u8g_font_gdr25r);
-    u8g.drawStr(53+d,30+d,"g");
+    u8g->setFont(u8g_font_gdr25r);
+    u8g->drawStr(0+d, 30+d, "U");
+    u8g->setFont(u8g_font_gdr30n);
+    u8g->drawStr90(23+d,10+d,"8");
+    u8g->setFont(u8g_font_gdr25r);
+    u8g->drawStr(53+d,30+d,"g");
     
-    u8g.drawHLine(2+d, 35+d, 47);
-    u8g.drawVLine(45+d, 32+d, 12);
+    u8g->drawHLine(2+d, 35+d, 47);
+    u8g->drawVLine(45+d, 32+d, 12);
 }
 
 void drawURL(void)
 {
-    u8g.setFont(u8g_font_4x6);
-    if ( u8g.getHeight() < 59 )
+    u8g->setFont(u8g_font_4x6);
+    if ( u8g->getHeight() < 59 )
     {
-        u8g.drawStr(53,9,"code.google.com");
-        u8g.drawStr(77,18,"/p/u8glib");
+        u8g->drawStr(53,9,"code.google.com");
+        u8g->drawStr(77,18,"/p/u8glib");
     }
     else
     {
-        u8g.drawStr(1,54,"code.google.com/p/u8glib");
+        u8g->drawStr(1,54,"code.google.com/p/u8glib");
     }
 }
 
 
 void draw(void) {
-    if ( u8g.getMode() == U8G_MODE_R3G3B2 ) {
+    if ( u8g->getMode() == U8G_MODE_R3G3B2 ) {
         drawColorBox();
     }
-    u8g.setColorIndex(1);
-    if ( U8G_MODE_GET_BITS_PER_PIXEL(u8g.getMode()) > 1 ) {
+    u8g->setColorIndex(1);
+    if ( U8G_MODE_GET_BITS_PER_PIXEL(u8g->getMode()) > 1 ) {
         drawLogo(2);
-        u8g.setColorIndex(2);
+        u8g->setColorIndex(2);
         drawLogo(1);
-        u8g.setColorIndex(3);
+        u8g->setColorIndex(3);
     }
     drawLogo(0);
     drawURL();
     
 }
-*/
+
 
 void setup(void) {
     Serial.begin(9600);
@@ -150,20 +152,21 @@ void setup(void) {
     Serial.println("blue!");
     digitalWrite(BACKLIGHT_LED_B, LOW);
 
-    U8GLIB_LM6059 u8g(7, 8, 4, 6);
+    u8g = new U8GLIB_LM6059(7, 8, 4, 6);
+    //u8g_InitSPI(&u8g, &u8g_dev_st7565_lm6059_sw_spi, 7, 8, 4, 6, U8G_PIN_NONE);
 }
 
 void loop(void) {
-/*
+    Serial.println("loop");
     // picture loop
-    u8g.firstPage();
+    u8g->firstPage();
     do {
         draw();
-        u8g.setColorIndex(1);
-    } while( u8g.nextPage() );
+        u8g->setColorIndex(1);
+    } while( u8g->nextPage() );
     
     // rebuild the picture after some delay
     delay(2000);
- */
+ 
 }
 
