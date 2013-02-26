@@ -25,7 +25,6 @@
 //#include <Wire.h>
 #include "pgmspace.h"
 #include <stdlib.h>
-#include <SPI.h>
 
 #include "ST7565.h"
 
@@ -381,27 +380,20 @@ void ST7565::begin(uint8_t contrast) {
 
 void ST7565::st7565_init(void) {
     // set pin directions
-    //pinMode(sid, OUTPUT);
-    //pinMode(sclk, OUTPUT);
+    pinMode(sid, OUTPUT);
+    pinMode(sclk, OUTPUT);
     pinMode(a0, OUTPUT);
     pinMode(rst, OUTPUT);
     pinMode(cs, OUTPUT);
-    Serial.print("cs pin: ");
-    Serial.println(cs);
     
-    // setup SPI
-    SPI.begin(cs);
-    SPI.setClockDivider(cs, 21);
-    SPI.setDataMode(cs, SPI_MODE3);
-    SPI.setBitOrder(cs, MSBFIRST);
     
-    // toggle RST low to reset; CS low so it'll listen to us
-//    if (cs > 0)
-//        digitalWrite(cs, LOW);
+    digitalWrite(cs, HIGH);
     
     digitalWrite(rst, LOW);
     delay(500);
     digitalWrite(rst, HIGH);
+    delay(500);
+    digitalWrite(rst, LOW);
     
     // LCD bias select
     st7565_command(CMD_SET_BIAS_7);
@@ -440,22 +432,31 @@ void ST7565::st7565_init(void) {
     updateBoundingBox(0, 0, LCDWIDTH-1, LCDHEIGHT-1);
 }
 
-inline void ST7565::spiwrite(uint8_t c) {
-    SPI.transfer(cs, c);
-    //shiftOut(sid, sclk, MSBFIRST, c);
+inline void ST7565::spiwrite(uint8_t val) {
+    uint8_t i = 8;
+    do
+    {
+        if ( val & 128 )
+            digitalWrite(sid, HIGH);
+        else
+            digitalWrite(sid, LOW);
+        val <<= 1;
+        delayMicroseconds(1);
+        digitalWrite(sclk, HIGH);
+        delayMicroseconds(1);
+        digitalWrite(sclk, LOW);
+        delayMicroseconds(1);
+        i--;
+    } while( i != 0 );
 }
 
 void ST7565::st7565_command(uint8_t c) {
     digitalWrite(a0, LOW);
-    delay(500);
-    
     spiwrite(c);
 }
 
 void ST7565::st7565_data(uint8_t c) {
     digitalWrite(a0, HIGH);
-    delay(500);
-    
     spiwrite(c);
 }
 void ST7565::st7565_set_brightness(uint8_t val) {
@@ -467,12 +468,12 @@ void ST7565::st7565_set_brightness(uint8_t val) {
 void ST7565::display(void) {
     uint8_t col, maxcol, p;
 
-    for (int x=0; x<128; x++) {
-        for (int y=0; y<64; y++) {
-            Serial.print(getpixel(x, y));
-        }
-        Serial.println("");
-    }
+//    for (int x=0; x<128; x++) {
+//        for (int y=0; y<64; y++) {
+//            Serial.print(getpixel(x, y));
+//        }
+//        Serial.println("");
+//    }
     
     /*
      Serial.print("Refresh ("); Serial.print(xUpdateMin, DEC);
@@ -482,6 +483,8 @@ void ST7565::display(void) {
      */
     
     for(p = 0; p < 8; p++) {
+        Serial.print("Page ");
+        Serial.println(p);
         /*
          putstring("new page! ");
          uart_putw_dec(p);

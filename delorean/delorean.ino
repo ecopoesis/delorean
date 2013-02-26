@@ -44,16 +44,8 @@
 //#include "ST7565.h"
 #include "U8glib.h"
 
-// pin 8 - Serial data out (SID) - orange
-// pin 7 - Serial clock out (SCLK) - yellow
-// pin 6 - Data/Command select (RS or A0) - green
-// pin 5 - LCD reset (RST) - blue
-// pin 4 - LCD chip select (CS) - white
-
-//ST7565 glcd(8, 7, 6, 5, 4);
-
+//ST7565* glcd = NULL;
 U8GLIB_LM6059* u8g = NULL;
-//u8g_t u8g;
 
 #define LOGO16_GLCD_HEIGHT 16
 #define LOGO16_GLCD_WIDTH  16
@@ -63,7 +55,14 @@ static unsigned char __attribute__ ((progmem)) logo16_glcd_bmp[]={
     0x30, 0xf0, 0xf0, 0xf0, 0xf0, 0x30, 0xf8, 0xbe, 0x9f, 0xff, 0xf8, 0xc0, 0xc0, 0xc0, 0x80, 0x00,
     0x20, 0x3c, 0x3f, 0x3f, 0x1f, 0x19, 0x1f, 0x7b, 0xfb, 0xfe, 0xfe, 0x07, 0x07, 0x07, 0x03, 0x00, };
 
-// the LCD backlight is connected up to a pin so you can turn it on & off
+// ST7565
+#define ST7565_CS       4   // white/purple
+#define ST7565_RST      5   // blue
+#define ST7565_A0       6   // green
+#define ST7565_SCK      7   // yellow
+#define ST7565_MOSI     8   // orange
+
+// LCD backlight
 #define BACKLIGHT_LED_R 9
 #define BACKLIGHT_LED_G 10
 #define BACKLIGHT_LED_B 11
@@ -86,12 +85,8 @@ void drawColorBox()
 
 void drawLogo(uint8_t d)
 {
-    u8g->setFont(u8g_font_gdr25r);
-    u8g->drawStr(0+d, 30+d, "U");
-    u8g->setFont(u8g_font_gdr30n);
-    u8g->drawStr90(23+d,10+d,"8");
-    u8g->setFont(u8g_font_gdr25r);
-    u8g->drawStr(53+d,30+d,"g");
+    u8g->setFont(u8g_font_helvB24r);
+    u8g->drawStr(0+d, 30+d, "miker");
     
     u8g->drawHLine(2+d, 35+d, 47);
     u8g->drawVLine(45+d, 32+d, 12);
@@ -100,15 +95,7 @@ void drawLogo(uint8_t d)
 void drawURL(void)
 {
     u8g->setFont(u8g_font_4x6);
-    if ( u8g->getHeight() < 59 )
-    {
-        u8g->drawStr(53,9,"code.google.com");
-        u8g->drawStr(77,18,"/p/u8glib");
-    }
-    else
-    {
-        u8g->drawStr(1,54,"code.google.com/p/u8glib");
-    }
+    u8g->drawStr(1,54,"www.miker.org");
 }
 
 
@@ -152,18 +139,21 @@ void setup(void) {
     Serial.println("blue!");
     digitalWrite(BACKLIGHT_LED_B, LOW);
 
-    u8g = new U8GLIB_LM6059(7, 8, 4, 6);
-    //u8g_InitSPI(&u8g, &u8g_dev_st7565_lm6059_sw_spi, 7, 8, 4, 6, U8G_PIN_NONE);
+    u8g = new U8GLIB_LM6059(ST7565_SCK, ST7565_MOSI, ST7565_CS, ST7565_A0, ST7565_RST);
+    //glcd = new ST7565(ST7565_MOSI, ST7565_SCK, ST7565_A0, ST7565_RST, ST7565_CS);
+    //glcd->begin(0x18);
+    //glcd->display();
 }
 
 void loop(void) {
     Serial.println("loop");
+    
     // picture loop
     u8g->firstPage();
     do {
         draw();
         u8g->setColorIndex(1);
-    } while( u8g->nextPage() );
+    } while( u8g->nextPage() ); 
     
     // rebuild the picture after some delay
     delay(2000);
