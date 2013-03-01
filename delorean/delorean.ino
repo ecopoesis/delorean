@@ -39,6 +39,7 @@
 // Core library for code-sense
 #include "Arduino.h"
 #include "WMath.h"
+#include <Wire.h>
 
 #include "Wakeup.h"
 //#include "ST7565.h"
@@ -66,6 +67,10 @@ static unsigned char __attribute__ ((progmem)) logo16_glcd_bmp[]={
 #define BACKLIGHT_LED_R 9
 #define BACKLIGHT_LED_G 10
 #define BACKLIGHT_LED_B 11
+
+// I2C ADDR
+#define I2C_LUMINOSITY  0x39
+#define I2C_CHRONO      0x68
 
 void drawColorBox()
 {
@@ -118,6 +123,7 @@ void draw(void) {
 
 void setup(void) {
     Serial.begin(9600);
+    Wire.begin();
     Serial.println("hello");
     //Serial.print(freeRam());
     
@@ -143,10 +149,35 @@ void setup(void) {
     //glcd = new ST7565(ST7565_MOSI, ST7565_SCK, ST7565_A0, ST7565_RST, ST7565_CS);
     //glcd->begin(0x18);
     //glcd->display();
+    
+    // setup chrono
+    Wire.beginTransmission(I2C_CHRONO); // address DS3231
+    Wire.write(0x0E); // select register
+    Wire.write(0b00011100); // write register bitmap, bit 7 is /EOSC
+    Wire.endTransmission();    
 }
 
 void loop(void) {
     Serial.println("loop");
+
+    // send request to receive data starting at register 0
+    Wire.beginTransmission(I2C_CHRONO); // 0x68 is DS3231 device address
+    Wire.write((byte)0); // start at register 0
+    Wire.endTransmission();
+    Wire.requestFrom(I2C_CHRONO, 3); // request three bytes (seconds, minutes, hours)
+
+    while(Wire.available())
+    {
+        int seconds = Wire.read(); // get seconds
+        int minutes = Wire.read(); // get minutes
+        int hours = Wire.read();   // get hours
+        
+        seconds = (((seconds & 0b11110000)>>4)*10 + (seconds & 0b00001111)); // convert BCD to decimal
+        minutes = (((minutes & 0b11110000)>>4)*10 + (minutes & 0b00001111)); // convert BCD to decimal
+        hours = (((hours & 0b00100000)>>5)*20 + ((hours & 0b00010000)>>4)*10 + (hours & 0b00001111)); // convert BCD to decimal (assume 24 hour mode)
+        
+        Serial.print(hours); Serial.print(":"); Serial.print(minutes); Serial.print(":"); Serial.println(seconds);
+    }
     
     // picture loop
     u8g->firstPage();
