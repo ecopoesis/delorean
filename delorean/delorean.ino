@@ -107,7 +107,7 @@ void drawURL(void)
 }
 
 
-void draw(void) {
+void draw(float lux) {
     if ( u8g->getMode() == U8G_MODE_R3G3B2 ) {
         drawColorBox();
     }
@@ -121,6 +121,10 @@ void draw(void) {
     drawLogo(0);
     drawURL();
     
+    u8g->setFont(u8g_font_4x6);
+    char luxbuffer[9];
+    sprintf(luxbuffer, "Lux: %2.0f", lux);
+    u8g->drawStr(90,6,luxbuffer);
 }
 
 
@@ -195,19 +199,18 @@ void loop(void) {
     
     sensors_event_t event;
     tsl->getEvent(&event);
-  
+/*
     if (event.light) {
+
         Serial.print(event.light); Serial.println(" lux");
     } else {
-        /* If event.light = 0 lux the sensor is probably saturated
-         and no reliable data could be generated! */
         Serial.println("Luminosity sensor overload");
-    }
+    } */
     
     // picture loop
     u8g->firstPage();
     do {
-        draw();
+        draw(event.light);
         u8g->setColorIndex(1);
     } while(u8g->nextPage());  
 }
