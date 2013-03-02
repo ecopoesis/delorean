@@ -42,11 +42,14 @@
 #include <Wire.h>
 
 #include "Wakeup.h"
-//#include "ST7565.h"
+#include "Adafruit_Sensor.h"
 #include "U8glib.h"
+#include "Adafruit_TSL2561.h"
+//#include "ST7565.h"
 
 //ST7565* glcd = NULL;
 U8GLIB_LM6059* u8g = NULL;
+Adafruit_TSL2561* tsl = NULL;
 
 #define LOGO16_GLCD_HEIGHT 16
 #define LOGO16_GLCD_WIDTH  16
@@ -154,7 +157,18 @@ void setup(void) {
     Wire.beginTransmission(I2C_CHRONO); // address DS3231
     Wire.write(0x0E); // select register
     Wire.write(0b00011100); // write register bitmap, bit 7 is /EOSC
-    Wire.endTransmission();    
+    Wire.endTransmission();
+    
+    // setup luminosity
+    tsl = new Adafruit_TSL2561(I2C_LUMINOSITY);
+    if (tsl->begin()) {
+        Serial.println("starting luminosity sensor");
+    } else {
+        Serial.println("could not find luminosity sensor");
+    }
+    
+    tsl->enableAutoGain(true);
+    tsl->setIntegrationTime(TSL2561_INTEGRATIONTIME_13MS);
 }
 
 void loop(void) {
@@ -179,15 +193,22 @@ void loop(void) {
         Serial.print(hours); Serial.print(":"); Serial.print(minutes); Serial.print(":"); Serial.println(seconds);
     }
     
+    sensors_event_t event;
+    tsl->getEvent(&event);
+  
+    if (event.light) {
+        Serial.print(event.light); Serial.println(" lux");
+    } else {
+        /* If event.light = 0 lux the sensor is probably saturated
+         and no reliable data could be generated! */
+        Serial.println("Luminosity sensor overload");
+    }
+    
     // picture loop
     u8g->firstPage();
     do {
         draw();
         u8g->setColorIndex(1);
-    } while( u8g->nextPage() ); 
-    
-    // rebuild the picture after some delay
-    delay(2000);
- 
+    } while(u8g->nextPage());  
 }
 

@@ -487,6 +487,10 @@
 		3657D68316D963B8000CE6D2 /* u8g_u16toa.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = u8g_u16toa.c; sourceTree = "<group>"; };
 		3657D68416D963B8000CE6D2 /* u8g_virtual_screen.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = u8g_virtual_screen.c; sourceTree = "<group>"; };
 		3657D68516D963B8000CE6D2 /* u8g.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = u8g.h; sourceTree = "<group>"; };
+		367BE17516E2968200BF3635 /* Adafruit_TSL2561.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Adafruit_TSL2561.cpp; sourceTree = "<group>"; };
+		367BE17616E2968200BF3635 /* Adafruit_TSL2561.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Adafruit_TSL2561.h; sourceTree = "<group>"; };
+		367BE17816E2976C00BF3635 /* Adafruit_Sensor.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Adafruit_Sensor.cpp; sourceTree = "<group>"; };
+		367BE17916E2976C00BF3635 /* Adafruit_Sensor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Adafruit_Sensor.h; sourceTree = "<group>"; };
 		369C244C16A642C20033B2E9 /* glcdfont.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = glcdfont.c; sourceTree = "<group>"; };
 		369C244D16A642C20033B2E9 /* ST7565.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ST7565.cpp; sourceTree = "<group>"; };
 		369C244E16A642C20033B2E9 /* ST7565.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ST7565.h; sourceTree = "<group>"; };
@@ -1406,6 +1410,8 @@
 		363EB47816D962A600CF20A6 /* libs */ = {
 			isa = PBXGroup;
 			children = (
+				367BE17716E2975800BF3635 /* Sensor */,
+				367BE17216E293A300BF3635 /* TSL2561 */,
 				363EB47A16D962E300CF20A6 /* U8glib */,
 			);
 			name = libs;
@@ -1520,6 +1526,24 @@
 				3657D68516D963B8000CE6D2 /* u8g.h */,
 			);
 			name = utility;
+			sourceTree = "<group>";
+		};
+		367BE17216E293A300BF3635 /* TSL2561 */ = {
+			isa = PBXGroup;
+			children = (
+				367BE17516E2968200BF3635 /* Adafruit_TSL2561.cpp */,
+				367BE17616E2968200BF3635 /* Adafruit_TSL2561.h */,
+			);
+			name = TSL2561;
+			sourceTree = "<group>";
+		};
+		367BE17716E2975800BF3635 /* Sensor */ = {
+			isa = PBXGroup;
+			children = (
+				367BE17816E2976C00BF3635 /* Adafruit_Sensor.cpp */,
+				367BE17916E2976C00BF3635 /* Adafruit_Sensor.h */,
+			);
+			name = Sensor;
 			sourceTree = "<group>";
 		};
 		36F366BD169BB785002811ED = {
